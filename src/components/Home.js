@@ -5,6 +5,7 @@ import slide3 from "../media/images/slide-3.jpg";
 import logo from "../media/images/logo.jpeg";
 import { Link } from "react-router-dom";
 import "../CSS/Home.css"
+
 import { FaCheckDouble } from "react-icons/fa";
 import { FaAngleDown} from "react-icons/fa";
 import { FaAngleUp} from "react-icons/fa";
@@ -17,6 +18,7 @@ import { FaAngleUp} from "react-icons/fa";
 export default function HomePage() {
   return (
     <>
+
     
         <div id="hero" className="carousel slide" data-ride="carousel">
           {/* <!-- Indicators --> */}
@@ -24,32 +26,42 @@ export default function HomePage() {
             <li data-target="#hero" data-slide-to="0" className="active"></li>
             <li data-target="#hero" data-slide-to="1"></li>
             <li data-target="#hero" data-slide-to="2"></li>
+
           </ul>
 
           {/* <!-- The slideshow --> */}
           <div className="carousel-inner">
             <div className="carousel-item active">
+
               <img src={slide1} alt="Dr" width="2000" height="600" />
+
               <div className="carousel-caption">
                 <h2>مرحباً بكم في مركز النهضة الطبي</h2>
                 <p>معكم لحظة بلحظة!</p>
               </div>
             </div>
             <div className="carousel-item">
+
               <img src={slide2} alt="Lab" width="2000" height="600" />
             </div>
             <div className="carousel-item">
               <img src={slide3} alt="Emergcy" width="2000" height="600" />
+
+            </div>
+            <div className="carousel-item">
+              
             </div>
           </div>
 
           {/* <!-- Left and right controls --> */}
+
           <a className="carousel-control-prev" href="#hero" data-slide="prev">
             <span className="carousel-control-prev-icon"></span>
           </a>
           <a className="carousel-control-next" href="#hero" data-slide="next">
             <span className="carousel-control-next-icon"></span>
           </a>
+
         </div>
 
         {/* <!-- ======= Featured Services Section ======= --> */}
@@ -167,10 +179,12 @@ export default function HomePage() {
         </section>
         {/* <!-- ======= appointment ======= --> */}
         <section id="appointment" className="appointment">
+
           <div className="container1" data-aos="zoom-in">
             <div className="text-center">
               <h3>في حالة طوارئ؟ تحتاج إلى المساعدة الآن؟</h3>
               <a  className="appointment-btn scrollto" href='tel:+01276015353'>
+
                 إحجز موعداً
               </a>
             </div>
@@ -206,6 +220,7 @@ export default function HomePage() {
                 <br />
                 <ul>
                   <li className="description2">
+
                    خدمة 24 ساعة يومياً<FaCheckDouble/>
                   </li>
                   <li className="description2">
@@ -213,6 +228,7 @@ export default function HomePage() {
                   </li>
                   <li className="description2">
                   أحدث المعدات<FaCheckDouble/>
+
                   </li>
                 </ul>
               </div>
@@ -234,9 +250,10 @@ export default function HomePage() {
                   className="collapsed question"
                   to="#faq1"
                 >
-                  ماهي مواعيد العمل لدينا؟{" "}
+ 
                   <FaAngleDown className="bi bi-chevron-down icon-show"/>
                   <FaAngleUp className="bi bi-chevron-up icon-close"/>
+
                 </div>
                 <div id="faq1" className="collapse" data-bs-parent=".faq-list">
                   <p>نحن متواجدن ال 24 ساعة يومياً</p>
@@ -252,6 +269,7 @@ export default function HomePage() {
                   ماهي الأقسام المتاحة لدينا؟{" "}
                   <FaAngleDown className="bi bi-chevron-down icon-show"/>
                   <FaAngleUp className="bi bi-chevron-up icon-close"/>
+
                 </div>
                 <div id="faq2" className="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -272,8 +290,10 @@ export default function HomePage() {
                   className="collapsed question"
                 >
                   ماهي إجراءات السلامة التي يتخذها المركز الطبي؟{" "}
+
                   <FaAngleDown className="bi bi-chevron-down icon-show"/>
                   <FaAngleUp className="bi bi-chevron-up icon-close"/>
+
                 </div>
                 <div id="faq3" className="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -285,8 +305,18 @@ export default function HomePage() {
             </ul>
           </div>
         </section>
-  
-     
+
+        <div className="container">
+          <div className="copyright text-center">
+            &copy; حقوق النشر ترجع لـ{" "}
+            <strong>
+              <span>مركز النهضة الطبي</span>
+            </strong>
+          </div>
+          <div className="credits text-center">صمم بواسطة فريق4</div>
+        </div>
+      </body>
+
     </>
   );
 }

@@ -2,8 +2,6 @@
     font-family: Nav;
     src: url("../Fonts/Cairo/Cairo-VariableFont_wght.ttf");
   }
-
-
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -202,7 +200,9 @@ section {
     width: 100%;
     height: 100%;
   }
+
   #hero .carousel-caption {
+
     text-align: center;
     background: rgba(255, 255, 255, 0.9);
     padding-top: 100px;
@@ -211,12 +211,16 @@ section {
     border-top: 4px solid #1e386d;
   }
   @media (max-width: 1200px) {
+
     #hero .carousel-caption {
+
       margin-left: 50px;
       margin-right: 50px;
     }
   }
+
   #hero h2 {
+
     color: #2f2f2f;
     margin-bottom: 90px;
     font-size: 40px;
@@ -225,7 +229,9 @@ section {
     justify-content:center;
     display: flex;
   }
+
   #hero p {
+
     margin: 0 auto 30px auto;
     color: #555555;
   }

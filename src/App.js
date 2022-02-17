@@ -8,6 +8,7 @@ import AboutUs from "./components/AboutUs"
 import Doctors from "./components/Doctors"
 import patient_portal from "./components/patient_portal"
 import HomePage from "./components/Home"
+
 import Footer from "./components/Footer"
 
 
