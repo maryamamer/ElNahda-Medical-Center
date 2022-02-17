@@ -20,7 +20,7 @@ function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <Link className="nav-link LastItem" to="#">  تسجيل الدخول </Link>
+                            <Link className="nav-link LastItem" to="/Login">  تسجيل الدخول </Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/ContactUs">اتصل بنا

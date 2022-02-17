@@ -18,7 +18,7 @@ import { FaAngleUp} from "react-icons/fa";
 export default function HomePage() {
   return (
     <>
-
+<body>
     
         <div id="hero" className="carousel slide" data-ride="carousel">
           {/* <!-- Indicators --> */}
