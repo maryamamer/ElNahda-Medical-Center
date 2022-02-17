@@ -6,42 +6,62 @@ import logo from "../media/images/logo.jpeg";
 import { Link } from "react-router-dom";
 import "../CSS/Home.css"
 
+import { FaCheckDouble } from "react-icons/fa";
+import { FaAngleDown} from "react-icons/fa";
+import { FaAngleUp} from "react-icons/fa";
+// import { FaAngleDoubleRight} from "react-icons/fa";
+// import {Linking} from 'react-native'
+
+
+
+
 export default function HomePage() {
   return (
     <>
-      <body>
-        <div id="demo" className="carousel slide" data-ride="carousel">
+
+    
+        <div id="hero" className="carousel slide" data-ride="carousel">
           {/* <!-- Indicators --> */}
           <ul className="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" className="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#hero" data-slide-to="0" className="active"></li>
+            <li data-target="#hero" data-slide-to="1"></li>
+            <li data-target="#hero" data-slide-to="2"></li>
+
           </ul>
 
           {/* <!-- The slideshow --> */}
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src={slide1} alt="Los Angeles" width="2000" height="600" />
+
+              <img src={slide1} alt="Dr" width="2000" height="600" />
+
               <div className="carousel-caption">
                 <h2>مرحباً بكم في مركز النهضة الطبي</h2>
                 <p>معكم لحظة بلحظة!</p>
               </div>
             </div>
             <div className="carousel-item">
-              <img src={slide2} alt="Chicago" width="2000" height="600" />
+
+              <img src={slide2} alt="Lab" width="2000" height="600" />
             </div>
             <div className="carousel-item">
-              <img src={slide3} alt="New York" width="2000" height="600" />
+              <img src={slide3} alt="Emergcy" width="2000" height="600" />
+
+            </div>
+            <div className="carousel-item">
+              
             </div>
           </div>
 
           {/* <!-- Left and right controls --> */}
-          <Link className="carousel-control-prev" to="#demo" data-slide="prev">
+
+          <a className="carousel-control-prev" href="#hero" data-slide="prev">
             <span className="carousel-control-prev-icon"></span>
-          </Link>
-          <Link className="carousel-control-next" to="#demo" data-slide="next">
+          </a>
+          <a className="carousel-control-next" href="#hero" data-slide="next">
             <span className="carousel-control-next-icon"></span>
-          </Link>
+          </a>
+
         </div>
 
         {/* <!-- ======= Featured Services Section ======= --> */}
@@ -159,10 +179,12 @@ export default function HomePage() {
         </section>
         {/* <!-- ======= appointment ======= --> */}
         <section id="appointment" className="appointment">
-          <div className="container" data-aos="zoom-in">
+
+          <div className="container1" data-aos="zoom-in">
             <div className="text-center">
               <h3>في حالة طوارئ؟ تحتاج إلى المساعدة الآن؟</h3>
-              <a className="appointment-btn scrollto" href="#appointment">
+              <a  className="appointment-btn scrollto" href='tel:+01276015353'>
+
                 إحجز موعداً
               </a>
             </div>
@@ -198,14 +220,15 @@ export default function HomePage() {
                 <br />
                 <ul>
                   <li className="description2">
-                    <i className="bi bi-check-circle"></i> خدمة 24 ساعة يومياً
+
+                   خدمة 24 ساعة يومياً<FaCheckDouble/>
                   </li>
                   <li className="description2">
-                    <i className="bi bi-check-circle"></i> أكفا الأطباء
-                    والمتخصصين
+                      أكفأ الأطباء والمتخصصين<FaCheckDouble/> 
                   </li>
                   <li className="description2">
-                    <i className="bi bi-check-circle"></i> أحدث المعدات
+                  أحدث المعدات<FaCheckDouble/>
+
                   </li>
                 </ul>
               </div>
@@ -227,9 +250,10 @@ export default function HomePage() {
                   className="collapsed question"
                   to="#faq1"
                 >
-                  ماهي مواعيد العمل لدينا؟{" "}
-                  <i className="bi bi-chevron-down icon-show"></i>
-                  <i className="bi bi-chevron-up icon-close"></i>
+ 
+                  <FaAngleDown className="bi bi-chevron-down icon-show"/>
+                  <FaAngleUp className="bi bi-chevron-up icon-close"/>
+
                 </div>
                 <div id="faq1" className="collapse" data-bs-parent=".faq-list">
                   <p>نحن متواجدن ال 24 ساعة يومياً</p>
@@ -243,8 +267,9 @@ export default function HomePage() {
                   className="collapsed question"
                 >
                   ماهي الأقسام المتاحة لدينا؟{" "}
-                  <i className="bi bi-chevron-down icon-show"></i>
-                  <i className="bi bi-chevron-up icon-close"></i>
+                  <FaAngleDown className="bi bi-chevron-down icon-show"/>
+                  <FaAngleUp className="bi bi-chevron-up icon-close"/>
+
                 </div>
                 <div id="faq2" className="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -265,8 +290,10 @@ export default function HomePage() {
                   className="collapsed question"
                 >
                   ماهي إجراءات السلامة التي يتخذها المركز الطبي؟{" "}
-                  <i className="bi bi-chevron-down icon-show"></i>
-                  <i className="bi bi-chevron-up icon-close"></i>
+
+                  <FaAngleDown className="bi bi-chevron-down icon-show"/>
+                  <FaAngleUp className="bi bi-chevron-up icon-close"/>
+
                 </div>
                 <div id="faq3" className="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -278,6 +305,7 @@ export default function HomePage() {
             </ul>
           </div>
         </section>
+
         <div className="container">
           <div className="copyright text-center">
             &copy; حقوق النشر ترجع لـ{" "}
@@ -288,6 +316,7 @@ export default function HomePage() {
           <div className="credits text-center">صمم بواسطة فريق4</div>
         </div>
       </body>
+
     </>
   );
 }
