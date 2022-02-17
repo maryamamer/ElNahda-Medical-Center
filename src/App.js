@@ -7,6 +7,7 @@ import ContactUs from "./components/ContactUs";
 import AboutUs from "./components/AboutUs"
 import Doctors from "./components/Doctors"
 import patient_portal from "./components/patient_portal"
+import HomePage from "./components/Home"
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <Router>
           <NavBar />
           <Switch>
+            <Route path={"/"} exact component={HomePage} />
+            <Route path={"/Home"} exact component={HomePage} />
             <Route path={"/ContactUs"} exact component={ContactUs} />
             <Route path={"/AboutUs"} exact component={AboutUs} />
             <Route path={"/Doctors"} exact component={Doctors} />

@@ -36,7 +36,7 @@ function NavBar() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/patientPortal">الرئيسية </Link>
+                            <Link className="nav-link" to="/Home">الرئيسية </Link>
                         </li>
                     </ul>
                     <Link className="navbar-brand" to="#">
