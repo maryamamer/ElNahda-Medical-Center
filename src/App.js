@@ -8,6 +8,8 @@ import AboutUs from "./components/AboutUs"
 import Doctors from "./components/Doctors"
 import patient_portal from "./components/patient_portal"
 import HomePage from "./components/Home"
+import Footer from "./components/Footer"
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
             <Route path={"/Doctors"} exact component={Doctors} />
             <Route path={"/patientPortal"} exact component={patient_portal} />
           </Switch>
+          <Footer />
         </Router>
     </div>
   );
