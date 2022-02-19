@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 class Users(models.Model):
     id=models.AutoField(primary_key=True)
+    comment = models.CharField(max_length=250,null=True)
     fullname=models.CharField(max_length=50)
     username=models.CharField(max_length=20)
     email=models.EmailField(max_length=50)
