@@ -39,9 +39,9 @@ export const AuthProvider = ({ children }) => {
 
     e.preventDefault();
     let response = await axios
-      .post("http://localhost:8000/api/token/", {
-        username: e.target.username.value,
-        password: e.target.password.value,
+      .post("/api/token/", {
+        'email': e.target.email.value,
+        'password': e.target.password.value,
       })
       .then((res) => {
         if (res.status === 200) {
