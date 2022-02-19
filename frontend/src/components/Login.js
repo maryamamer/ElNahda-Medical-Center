@@ -23,7 +23,7 @@ function Login() {
                                     <form method="post" class="my-login-validation" novalidate onSubmit={loginuser}>
                                         <div class="form-group">
                                             <label for="email">اسم المسنخدم</label>
-                                            <input id="email" type="text" class="form-control" name="username" required  />
+                                            <input id="email" type="email" class="form-control" name="email" required  />
                                             <div class="invalid-feedback">
                                                 من فضلك ادخل بريد ألكتروني صحيح
                                             </div>

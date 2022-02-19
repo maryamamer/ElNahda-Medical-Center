@@ -23,17 +23,16 @@ function NavBar() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav mr-auto">
-                    {
-                            user ? (
+                    { user ?
+                            
                                 <li className="nav-item">
                                 <Link onClick={logoutuser} className="nav-link" to="/Logout"> تسجيل خروج</Link>
                                </li>
-                            ):
-                            (
+                           :
                             <li className="nav-item">
                             <Link className="nav-link LastItem" to="/Login">  تسجيل الدخول </Link>
                             </li>
-                            )
+                         
                         }
                        
                         <li className="nav-item">

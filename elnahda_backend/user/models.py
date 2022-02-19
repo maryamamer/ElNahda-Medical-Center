@@ -74,6 +74,8 @@ class Customuser(AbstractUser):
     
     def __str__(self):
         return self.username
+    def __str__(self):
+        return self.email
 #     id=models.AutoField(primary_key=True)
 #     fullname=models.CharField(max_length=50)
 #     username=models.CharField(max_length=20)

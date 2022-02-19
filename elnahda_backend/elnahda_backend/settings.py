@@ -127,7 +127,7 @@ WSGI_APPLICATION = 'elnahda_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Elnahda_center',
+        'NAME': 'ElNahda_center',
         'USER': 'postgres',
         'PASSWORD': 'root',
         'HOST': 'localhost',
