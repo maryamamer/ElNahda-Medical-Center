@@ -1,4 +1,4 @@
-import React from "react";
+import {React,useContext} from "react";
 import slide1 from "../media/images/slide-1.jpg";
 import slide2 from "../media/images/slide-2.jpg";
 import slide3 from "../media/images/slide-3.jpg";
@@ -9,6 +9,8 @@ import "../CSS/Home.css"
 import { FaCheckDouble } from "react-icons/fa";
 import { FaAngleDown} from "react-icons/fa";
 import { FaAngleUp} from "react-icons/fa";
+import Auth from "../context/auth"
+
 // import { FaAngleDoubleRight} from "react-icons/fa";
 // import {Linking} from 'react-native'
 
@@ -16,10 +18,11 @@ import { FaAngleUp} from "react-icons/fa";
 
 
 export default function HomePage() {
+  let { user, logoutuser } = useContext(Auth);
   return (
     <>
 <body>
-    
+  
         <div id="hero" className="carousel slide" data-ride="carousel">
           {/* <!-- Indicators --> */}
           <ul className="carousel-indicators">
@@ -38,6 +41,15 @@ export default function HomePage() {
               <div className="carousel-caption">
                 <h2>مرحباً بكم في مركز النهضة الطبي</h2>
                 <p>معكم لحظة بلحظة!</p>
+                {
+                  user ? (
+<h1>Hello {user.username}</h1>
+                  ):
+                  (
+                    <h1>Hello</h1>
+                  )
+                }
+                
               </div>
             </div>
             <div className="carousel-item">
