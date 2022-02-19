@@ -67,10 +67,11 @@ function patient_portal() {
                 <p>إشعارات إشعارات إشعارات إشعارات إشعارات</p>
             </div>
 
-            {/*<!--*************************** 1st Card - Medications ***************************--> */}
+            {/* <!--*************************** 1st Card - Medications ***************************--> */}
             <div class="album  bg-light">
                 <div class="container">
                     <div class="row">
+
                         <div class="col-md-3 col-sm-12">
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-header text-center">
@@ -141,9 +142,9 @@ function patient_portal() {
                                         </div>
                                         <div class="text-center">
                                             <p class="text-muted">
+                                                <FaClock size={25}/>
                                                 10:30 - 10:00
                                                 {/* <i class="far fa-clock"></i> */}
-                                                <FaClock size={25}/>
                                             </p>
                                             <h5>
                                                 د/ أمل عبد السلام
@@ -160,20 +161,20 @@ function patient_portal() {
                                                 </span>
                                             </div>
                                         </div>
-                                        <br />
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div>
-                                                {/* <i class="fas fa-times-circle"></i> */}
-                                                إلغاء الحجز
-                                                <FaTimesCircle size={25}/>
-                                            </div>
+                                        <br/>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    {/* <i class="fas fa-times-circle"></i> */}
+                                                    إلغاء الحجز
+                                                    <FaTimesCircle size={25} />
+                                                </div>
 
-                                            <div>
-                                                <i class="fas fa-calendar-day"></i>
-                                                تغيير المعاد
-                                                <FaCalendarDay size={25}/>
+                                                <div>
+                                                    <i class="fas fa-calendar-day"></i>
+                                                    تغيير المعاد
+                                                    <FaCalendarDay size={25} />
+                                                </div>
                                             </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -195,12 +196,11 @@ function patient_portal() {
                                 </ul>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
         </>
     );
 }
+
 export default patient_portal;

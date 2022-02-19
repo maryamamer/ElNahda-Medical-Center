@@ -1,6 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
 
-/*============================= NavBar =================================================---
+/*============================= NavBar =================================================--
 .custom-toggler.navbar-toggler {
   border-color: white;
 }
@@ -54,9 +54,9 @@
 
 @font-face {
   font-family: Nav;
-  /* src: url("./Fonts/Cairo/Cairo-VariableFont_wght.ttf");--
-  src: url("./Cairo/Cairo-VariableFont_wght.ttf");
-} */
+  /* src: url("./Fonts/Cairo/Cairo-VariableFont_wght.ttf"); --
+  src: url("./Cairo/Cairo-VariableFont_wght.ttf"); 
+}*/
 
 /*============================= MY CSS =================================================*/
 body {
