@@ -1,6 +1,8 @@
 import React from "react";
 import '../CSS/patient_portal.css'
 import { FaHome, FaCalendarAlt, FaFileMedical, FaFlask, FaPills, FaHistory, FaSignOutAlt, FaClock, FaTimesCircle, FaCalendarDay } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
 function patient_portal() {
     return (
         <>
@@ -9,11 +11,11 @@ function patient_portal() {
                 <ul class="sidebar-navigation">
                     <li class="header">لوحة المتابعة</li>
                     <li>
-                        <a class="current" href="patient_portal.html">
+                        <Link class="current" to="/patientPortal">
                             {/* <i class="fas fa-home" aria-hidden="true"></i> */}
                             <FaHome size={25} />
                             الرئيسية
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a href="appointments.html">
@@ -37,11 +39,11 @@ function patient_portal() {
                         </a>
                     </li>
                     <li>
-                        <a href="prescription.html">
+                        <Link to="/prescription">
                             {/* <i class="fas fa-pills" aria-hidden="true"></i> */}
                             <FaPills size={25}/>
                             الروشيتة
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a href="#">

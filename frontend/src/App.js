@@ -16,7 +16,7 @@ import Forget from "./components/Forget";
 import PrivateRoute from "./PrivateRoute"
 import { AuthProvider } from './context/auth'
 import logout from "./components/logout";
-
+import prescription from "./components/prescription"
 
 
 export default class App extends React.Component {
@@ -39,6 +39,8 @@ export default class App extends React.Component {
 
               <Route path={"/Doctors"} exact component={Doctors} />
               <Route path={"/patientPortal"} exact component={patient_portal} />
+              <Route path={"/prescription"} exact component={prescription} />
+              
               <PrivateRoute path={"/ProfilePage"} exact component={ProfilePage} />
 
               <Route path={"/Login"} exact component={Login} />
