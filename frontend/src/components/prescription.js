@@ -18,11 +18,11 @@ function prescription() {
                         </Link>
                     </li>
                     <li>
-                        <a href="appointments.html">
+                        <Link to="/appointments">
                             {/* <i class="fas fa-calendar-alt" aria-hidden="true"></i> */}
                             <FaCalendarAlt size={25} />
                             المواعيد
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a href="#">

@@ -18,44 +18,44 @@ function patient_portal() {
                         </Link>
                     </li>
                     <li>
-                        <a href="appointments.html">
+                        <Link to="/appointments">
                             {/* <i class="fas fa-calendar-alt" aria-hidden="true"></i> */}
                             <FaCalendarAlt size={25} />
                             المواعيد
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a href="#">
                             {/* <i class="fas fa-file-alt" aria-hidden="true"></i> */}
-                            <FaFileMedical size={25}/>
+                            <FaFileMedical size={25} />
                             التقارير
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             {/* <i class="fas fa-flask" aria-hidden="true"></i> */}
-                            <FaFlask size={25}/>
+                            <FaFlask size={25} />
                             نتائج المعمل
                         </a>
                     </li>
                     <li>
                         <Link to="/prescription">
                             {/* <i class="fas fa-pills" aria-hidden="true"></i> */}
-                            <FaPills size={25}/>
+                            <FaPills size={25} />
                             الروشيتة
                         </Link>
                     </li>
                     <li>
                         <a href="#">
                             {/* <i class="fas fa-history" aria-hidden="true"></i> */}
-                            <FaHistory size={25}/>
+                            <FaHistory size={25} />
                             السجل الصحي
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             {/* <i class="fas fa-sign-out-alt" aria-hidden="true"></i> */}
-                            <FaSignOutAlt size={25}/>
+                            <FaSignOutAlt size={25} />
                             الخروج
                         </a>
                     </li>
@@ -144,7 +144,7 @@ function patient_portal() {
                                         </div>
                                         <div class="text-center">
                                             <p class="text-muted">
-                                                <FaClock size={25}/>
+                                                <FaClock size={25} />
                                                 10:30 - 10:00
                                                 {/* <i class="far fa-clock"></i> */}
                                             </p>
@@ -163,20 +163,20 @@ function patient_portal() {
                                                 </span>
                                             </div>
                                         </div>
-                                        <br/>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    {/* <i class="fas fa-times-circle"></i> */}
-                                                    إلغاء الحجز
-                                                    <FaTimesCircle size={25} />
-                                                </div>
-
-                                                <div>
-                                                    <i class="fas fa-calendar-day"></i>
-                                                    تغيير المعاد
-                                                    <FaCalendarDay size={25} />
-                                                </div>
+                                        <br />
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div>
+                                                {/* <i class="fas fa-times-circle"></i> */}
+                                                إلغاء الحجز
+                                                <FaTimesCircle size={25} />
                                             </div>
+
+                                            <div>
+                                                <i class="fas fa-calendar-day"></i>
+                                                تغيير المعاد
+                                                <FaCalendarDay size={25} />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

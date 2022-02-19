@@ -1,4 +1,4 @@
-import React, { component } from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 /* import Switch from "react-switch" */
 import "./App.css";
@@ -17,9 +17,9 @@ import PrivateRoute from "./PrivateRoute"
 import { AuthProvider } from './context/auth'
 import logout from "./components/logout";
 import prescription from "./components/prescription"
+import appointments from './components/appointments'
 
-
-export default class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
       <div className="App">
@@ -40,6 +40,7 @@ export default class App extends React.Component {
               <Route path={"/Doctors"} exact component={Doctors} />
               <Route path={"/patientPortal"} exact component={patient_portal} />
               <Route path={"/prescription"} exact component={prescription} />
+              <Route path={"/appointments"} exact component={appointments} />
               
               <PrivateRoute path={"/ProfilePage"} exact component={ProfilePage} />
 
