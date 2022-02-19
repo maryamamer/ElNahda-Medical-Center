@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 from .serializers import Userser,Doctorser
-from user.models import User,Doctor
+from user.models import Customuser,Doctor
 from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -28,7 +28,7 @@ class MyTokenObtainPairView(TokenObtainPairView):
 
 class User_view(viewsets.ModelViewSet):
     serializer_class = Userser
-    queryset = User.objects.all()
+    queryset = Customuser.objects.all()
     
 class Doctor_view(viewsets.ModelViewSet):
     serializer_class = Doctorser
