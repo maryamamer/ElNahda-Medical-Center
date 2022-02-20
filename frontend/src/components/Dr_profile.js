@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Doctor from "../media/images/Doctor.jpeg";
 import "../CSS/dr_profile.css";
+
 import { BsFillTelephoneOutboundFill} from "react-icons/bs";
 import { BsFillEnvelopeFill} from "react-icons/bs";
 import { BsFillAwardFill} from "react-icons/bs";
@@ -70,6 +71,7 @@ export default function Dr_Profile() {
           <div className="d-card">
             <div className="info">
               <h6>
+
                 <br /> &nbsp; الهاتف <BsFillTelephoneOutboundFill />
                 : 02-10293792382
                 <br />  &nbsp; <BsFillEnvelopeFill/>الميل :
@@ -77,6 +79,7 @@ export default function Dr_Profile() {
                 <br /> <BsBook /> &nbsp; التعليم :
                 دكتوراة من جامعة القاهرة
                 <br /> <BsFillAwardFill/> &nbsp; الانجازات : حاصل
+
                 على جائزة أفضل طبيب
               </h6>
             </div>

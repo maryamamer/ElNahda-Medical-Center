@@ -2,6 +2,7 @@
   font-family: Nav;
   src: url("../Fonts/Cairo/Cairo-VariableFont_wght.ttf");
 }
+
 .welcome {
   background-color: #7dc6ff;
   height: 80px;
@@ -87,6 +88,7 @@ padding: 30px;
     color:white;
   
 }
+
 .book{
    top:150px;
    position: relative;
