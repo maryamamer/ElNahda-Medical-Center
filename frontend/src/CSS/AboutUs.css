@@ -29,6 +29,7 @@
 }  */
 body.bgimg{
     background-image: url(../media/images/Doctors.png);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,4 +37,5 @@ body.bgimg{
     height: 600px;
     
 }
+
 
