@@ -3,10 +3,6 @@
     src: url("../Fonts/Cairo/Cairo-VariableFont_wght.ttf");
 }
 
-html, #login/* , body */ {
-    height: 100%;
-    position: relative;
-}
 
 #login::after {
     content: "";

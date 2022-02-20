@@ -1,12 +1,14 @@
 import React from "react";
-import Doctors from '../media/images/Doctors'
+//  import Doctors from '../media/images/Doctors.png'
 import '../CSS/AboutUs.css'
 
 function AboutUs() {
     return (
         <>
-            <div className="container">
-                <img src={Doctors} style={{ width: "100%", height: "150%" }} alt="Doctors" />
+            <body className="bgimg">
+
+            <div className="container" >
+                {/* <img src={Doctors}  alt="Doctors" /> */}
                 <h1 className="center_header">عنّا</h1>
                 <p className="centered">
                     أول واحدث مجمع طبى متكامل بالنهضة
@@ -25,6 +27,7 @@ function AboutUs() {
                     والتوليد - عيادة الأسنان
                 </p>
             </div>
+            </body>
         </>
     );
 }

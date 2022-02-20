@@ -8,10 +8,6 @@ import { BsFillEnvelopeFill} from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 
 
-
-
-
-
 export default function Footer() {
   return (
     <>

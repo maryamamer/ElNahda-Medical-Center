@@ -1,40 +1,14 @@
-.BorderDiv {
-    /*  border: 3px solid rgb(0, 0, 0);
-  position: absolute;
-  width: 90%;
-  padding: 10px;
-  text-align: center;
-  margin-top: 50px; */
-    margin: auto;
-}
-
+   
 @font-face {
     font-family: New;
     src: url("../Fonts/Cairo/Cairo-VariableFont_wght.ttf");
 }
 
-/* .image {
-    background-image: url(../images/Doctors);
-    font-family: New;
-    position: absolute;
-    width: 90%;
-    height: 80%;
-    text-align: justify;
-    text-align: center;
-    outline: 3px solid;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    font-size: 30px;
-    margin-top: 50px;
-} */
-
-.container {
-    position: relative;
+ .container {
+    position:relative;
     text-align: center;
     color: black;
-    margin-top: 5%;
+   
 }
 
 .centered {
@@ -42,16 +16,22 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 23px;
-    margin-top: 2%;
-}
+    font-size: 25px;
+    margin-top: 23%;
+} 
 
-.center_header
+/* .center_header
 {
     position: absolute;
     left: 50%;
     transform: translate(-10%, -700%);
     font-size: 50px;
+}  */
+body.bgimg{
+    background-image: url(../media/images/Doctors.png);
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
 }
-
 
