@@ -251,7 +251,7 @@ export default class HomePage extends React.Component {
                   className="collapsed question"
                   to="#faq1"
                 >
-
+                  ماهي مواعيدنا؟{" "}
                   <FaAngleDown className="bi bi-chevron-down icon-show" />
                   <FaAngleUp className="bi bi-chevron-up icon-close" />
 
@@ -307,15 +307,6 @@ export default class HomePage extends React.Component {
           </div>
         </section>
 
-        <div className="container">
-          <div className="copyright text-center">
-            &copy; حقوق النشر ترجع لـ{" "}
-            <strong>
-              <span>مركز النهضة الطبي</span>
-            </strong>
-          </div>
-          <div className="credits text-center">صمم بواسطة فريق4</div>
-        </div>
       </body>
 
     </>
