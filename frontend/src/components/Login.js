@@ -15,11 +15,10 @@ function Login() {
                     <div class="row justify-content-md-center h-100 ">
                         <div class="card-wrapper">
                             <div class="brand">
-                                <img src={Nurse} alt="logo" />
+                            <h4 class="card-title text-dark">تسجيل الدخول</h4>
                             </div>
-                            <div class="card fat" />
                             <div class="card-body">
-                                <h4 class="card-title">تسجيل الدخول</h4>
+                                
                                 <form method="post" class="my-login-validation" novalidate onSubmit={loginuser}>
                                     <div class="form-group">
                                         <label for="email">اسم المسنخدم</label>
