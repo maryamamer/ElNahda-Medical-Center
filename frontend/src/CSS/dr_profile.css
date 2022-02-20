@@ -2,12 +2,6 @@
   font-family: Nav;
   src: url("../Fonts/Cairo/Cairo-VariableFont_wght.ttf");
 }
-body {
-  font-family: "Poppins", sans-serif;
-}
-.navbar {
-  background-color: rgb(0, 0, 68);
-}
 
 .welcome {
   background-color: #7dc6ff;
@@ -94,13 +88,7 @@ padding: 30px;
     color:white;
   
 }
-footer{
-    background-color: #add8e6;
 
-    height: 280px;
- position: absolute;
-  width:100%;
-}
 .book{
    top:150px;
    position: relative;

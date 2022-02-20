@@ -3,6 +3,16 @@ import { Link } from "react-router-dom";
 import Doctor from "../media/images/Doctor.jpeg";
 import "../CSS/dr_profile.css";
 
+import { BsFillTelephoneOutboundFill} from "react-icons/bs";
+import { BsFillEnvelopeFill} from "react-icons/bs";
+import { BsFillAwardFill} from "react-icons/bs";
+import { BsBook } from "react-icons/bs";
+
+
+
+
+
+
 export default function Dr_Profile() {
   return (
     <>
@@ -61,13 +71,15 @@ export default function Dr_Profile() {
           <div className="d-card">
             <div className="info">
               <h6>
-                <br /> <i className="bi bi-telephone-inbound"></i> &nbsp; الهاتف
+
+                <br /> &nbsp; الهاتف <BsFillTelephoneOutboundFill />
                 : 02-10293792382
-                <br /> <i className="bi bi-envelope"></i> &nbsp; الميل :
+                <br />  &nbsp; <BsFillEnvelopeFill/>الميل :
                 d@gmail.com
-                <br /> <i className="fas fa-book-open"></i> &nbsp; التعليم :
+                <br /> <BsBook /> &nbsp; التعليم :
                 دكتوراة من جامعة القاهرة
-                <br /> <i className="fas fa-award"></i> &nbsp; الانجازات : حاصل
+                <br /> <BsFillAwardFill/> &nbsp; الانجازات : حاصل
+
                 على جائزة أفضل طبيب
               </h6>
             </div>
