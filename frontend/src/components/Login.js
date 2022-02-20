@@ -1,5 +1,4 @@
 import { React, useContext } from "react";
-import Nurse from '../media/images/Nurse.jpeg';
 import '../CSS/Login.css';
 import Auth from "../context/auth";
 
