@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Doctor from "../media/images/Doctor.jpeg";
 import "../CSS/dr_profile.css";
-
 import { BsFillTelephoneOutboundFill} from "react-icons/bs";
 import { BsFillEnvelopeFill} from "react-icons/bs";
 import { BsFillAwardFill} from "react-icons/bs";
