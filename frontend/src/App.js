@@ -18,9 +18,14 @@ import { AuthProvider } from './context/auth'
 import logout from "./components/logout";
 import prescription from "./components/prescription"
 import appointments from './components/appointments'
+
+// import Dr_Profile from "./components/Dr_profile";
+import Booking from "./components/booking";
+
 import Dr_Profile from "./components/Dr_profile";
 
 import Message from "./components/Message";
+
 
 
 export default class App extends Component {
@@ -35,7 +40,10 @@ export default class App extends Component {
 
           <Switch>
             <AuthProvider>
-              <Route path={"/"} exact component={Dr_Profile} />
+
+              <Route path={"/"} exact component={Booking} />
+
+
               <Route  path={"/Home"} exact component={HomePage} />
               <Route path={"/ContactUs"} exact component={ContactUs} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
