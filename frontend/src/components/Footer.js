@@ -1,5 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../CSS/Footer.css"
+// import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { BsJoystick } from "react-icons/bs";
+import { BsFillTelephoneOutboundFill} from "react-icons/bs";
+import { BsFillEnvelopeFill} from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
+
+
+
+
 
 
 export default function Footer() {
@@ -21,45 +31,44 @@ export default function Footer() {
               >
                 للإستفسار
               </h2>
-              <div className="block-23 mb-3 text-right text-light">
-                <ul >
-                  <li >
+              <div className="block-23 mb-3 text-right text-light"  >
+                <ul className="no-bullets">
+                  <li  >
                     <Link
-                      className="text"
-                      style={{ "padding-right": "10px!important" }}
+                      className="text text-light"
+                      
                       target="_blank"
                       to=""
                     >
-                      العامرية -النهضة-كوبري شربات-اعلي صيدلية غباشي{" "}
+                      العامرية -النهضة-كوبري شربات-اعلي صيدلية غباشي{" "} <BsJoystick />
                     </Link>
                   </li>
-                  <li style={{ "margin-bottom": "0px!important" }}>
-                    <a href="tel:01050600505">
+                  <li >
+                    <a href="tel:01050600505" >
                       <span
-                        className="text"
-                        style={{ "padding-right": "10px!important" }}
+                        className="text text-light" 
                       >
-                        03-3475160 / 01050600505 / 01050600606
+                        03-3475160 / 01050600505 / 01050600606 <BsFillTelephoneOutboundFill />
                       </span>
                     </a>
                   </li>
                   <li>
                     <a href="mailto:#">
                       <span
-                        className="text"
-                        style={{ "padding-right": "10px !important" }}
+                        className="text text-light"
+                       
                       >
-                        Info@gmail.com
+                        Info@gmail.com <BsFillEnvelopeFill />
                       </span>
                     </a>
                   </li>
                   <li>
                     <a href="https://www.facebook.com/Nahdamedicalcenter">
                       <span
-                        className="text"
-                        style={{ "padding-right": "10px !important" }}
+                        className="text text-light"
+                       
                       >
-                        مركز النهضة الطبي
+                        مركز النهضة الطبي <BsFacebook />
                       </span>
                     </a>
                   </li>
