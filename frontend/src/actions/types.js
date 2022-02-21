@@ -10,4 +10,5 @@ export const LOGOUT = 'LOGOUT';
 export const ADD_APPOINTMENT ='ADD_APPOINTMENT';
 export const ADD_Patient_APPOINTMENT ='ADD_Patient_APPOINTMENT ';
 export const ADD_Doctor_APPOINTMENT ='ADD_Doctor_APPOINTMENT ';
+
 export const REM_APPOINTMENT ='REM_APPOINTMENT';

@@ -1,21 +1,23 @@
 import axios from 'axios';
+
 import { useSelector, useDispatch } from "react-redux";
 import { FaAccessibleIcon } from 'react-icons/fa';
 import {
     ADD_APPOINTMENT,
     REM_APPOINTMENT,
     ADD_Patient_APPOINTMENT
+
 } from './types';
 
 export const add_appointment = (date, message) => async dispatch => {
 
-  
         const config = {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `JWT ${localStorage.getItem('access')}`,
                 'Accept': 'application/json'
             }
+
         }
 
         const body = JSON.stringify({ date:date, message:message });
@@ -31,7 +33,7 @@ export const add_appointment = (date, message) => async dispatch => {
         } catch (err) {
            console.log(err)
         }
-    }
+ };
 
 export const add_patient_appointment = () => async dispatch => {
 
@@ -60,3 +62,6 @@ export const add_patient_appointment = () => async dispatch => {
            console.log(err)
         }
     }
+
+
+

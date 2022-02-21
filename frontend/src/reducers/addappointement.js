@@ -1,3 +1,4 @@
+
 import {
     ADD_APPOINTMENT,
     ADD_Patient_APPOINTMENT,
@@ -6,6 +7,7 @@ import {
 
    
 } from '../actions/types';
+
 
 const INITIAL_STATE = {
     access: localStorage.getItem('access'),
@@ -22,12 +24,10 @@ export default function addapp(state = INITIAL_STATE, action) {
         app: payload
     };
     case ADD_Patient_APPOINTMENT:
-      return {
-          ...state,
-        app: payload
-    };
+
 
     case REM_APPOINTMENT:
+    case "REM_APP":
       return [...state.filter((app) => app.id !== action.payload)];
 
     default:
