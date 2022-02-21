@@ -5,6 +5,7 @@ import axios from "axios"
 import Nada from '../media/images/Nada.png'
 import '../CSS/Doctors.css'
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from "react-redux";
 
 
 function Doctors() {
@@ -18,7 +19,8 @@ function Doctors() {
 
     });
 
-
+    const apps =useSelector((state)=>state.addapp)
+    console.log(apps.app.date)
     return (
         <>
 

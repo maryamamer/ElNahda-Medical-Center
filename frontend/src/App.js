@@ -43,8 +43,10 @@ export default class App extends Component {
           <Switch>
               <Route path={"/"} exact component={HomePage} />
 
+
               <Route path={"/DrProfile"} exact component={Dr_Profile} />
           
+
               <Route path={"/dr"} exact component={Dr_Profile} />
               <Route path={"/booking"} exact component={Booking} />
               <Route  path={"/Home"} exact component={HomePage} />
@@ -59,8 +61,6 @@ export default class App extends Component {
               <Route path={"/ProfilePage"} exact component={ProfilePage} />
               <Route path={"/Login"} exact component={Login} />
               <Route path={"/Message"} exact component={Message} />
-              <Route path={"/ProfilePage"} exact component={ProfilePage} />
-              <Route path={"/Login"} exact component={Login} />
               <Route path={"/Forget"} exact component={Forget} />
           </Switch>
           <Footer />

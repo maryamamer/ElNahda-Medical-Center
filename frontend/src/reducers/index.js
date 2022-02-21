@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import auth from './auth';
+import addapp from './addappointement';
 
 export default combineReducers({
-    auth
+    auth,
+    addapp:addapp
 });
