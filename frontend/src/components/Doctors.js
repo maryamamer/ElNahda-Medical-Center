@@ -19,8 +19,6 @@ function Doctors() {
 
     });
 
-    const apps =useSelector((state)=>state.addapp)
-    console.log(apps.app.date)
     return (
         <>
 
@@ -37,7 +35,7 @@ function Doctors() {
                                 return (
                                     <>
                                         <div className="col-md-3">
-                                            <Link to= "/DrProfile">
+                                            <Link to= "/dr">
                                             <div className="divDoctor">
                                                 <img className="img1" src={`${doctor.image}`} />
                                                 <div className="overview justify-content-evenly">

@@ -39,7 +39,8 @@ export default class App extends Component {
         <Router>
           <Provider store={store}>
             <NavBar />
-            <Switch>
+
+          <Switch>
               <Route path={"/"} exact component={HomePage} />
               <Route path={"/dr"} exact component={Dr_Profile} />
               <Route path={"/booking"} exact component={Booking} />
