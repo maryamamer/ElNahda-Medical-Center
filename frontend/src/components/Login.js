@@ -49,7 +49,7 @@ function Login() {
 
 
                                     <div class="form-group m-0" />
-                                    <input type="submit" class="btn btn-primary btn-block" value="تسجيل الدخول" />
+                                    <input type="submit" class="btn btn-primary btn-block" value="تسجيل الدخول"  />
 
 
                                 </form>
