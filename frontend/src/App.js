@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
 import { Provider } from 'react-redux';
 import store from './store';
+
 
 
 import "./App.css";
@@ -25,10 +27,12 @@ import appointments from './components/appointments'
 import Dr_Profile from "./components/Dr_profile";
 
 
+
 // import Dr_Profile from "./components/Dr_profile";
 import Booking from "./components/booking";
 
 import Message from "./components/Message";
+
 
 
 
@@ -42,9 +46,6 @@ export default class App extends Component {
             <NavBar />
           <Switch>
               <Route path={"/"} exact component={HomePage} />
-
-              <Route path={"/DrProfile"} exact component={Dr_Profile} />
-          
 
               <Route path={"/dr"} exact component={Dr_Profile} />
               <Route path={"/booking"} exact component={Booking} />
