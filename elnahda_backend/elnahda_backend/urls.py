@@ -27,6 +27,13 @@ from django.views.generic import TemplateView
 router=routers.DefaultRouter()
 router.register(r'users', User_view, 'Customuser')
 router.register(r'doctors', Doctor_view, 'Doctor')
+router.register(r'Appointments', Appointment_view, 'Appointment')
+router.register(r'PatientAppointments', PatientAppointment_view, 'PatientAppointment')
+router.register(r'DoctorAppointments', DoctorAppointment_view, 'DoctorAppointment')
+router.register(r'Comments', Comment_view, 'Comment')
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -2,6 +2,7 @@ import {React,useContext} from "react";
 import pp from '../media/images/pp.png';
 import '../CSS/Profile.css';
 import Auth from "../context/auth";
+import { Link } from "react-router-dom";
 
 function ProfilePage() {
     let {user}=useContext(Auth)
@@ -29,7 +30,7 @@ function ProfilePage() {
                         </div>
                     </div>
 
-                    <div className="card mt-3 " style="height: 25rem;" >
+                    <div className="card mt-3 " style={{"height": "25rem"}} >
                         <ul className="list-group list-group-flush" >
                             <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                 <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -67,7 +68,7 @@ function ProfilePage() {
                                     </svg>الفيس بوك </h6>
 
                             </li>
-                            <br> </br> 
+                            <br/> 
                             <br> </br> 
                             <br> </br>
                             <br> </br>
@@ -77,7 +78,7 @@ function ProfilePage() {
                               
                            
                               
-                                <a href="#">سجل المريض</a>
+                                <Link to="/patientPortal">سجل المريض</Link>
                             </li>
                         </ul>
                     </div>

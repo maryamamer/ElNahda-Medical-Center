@@ -1,7 +1,8 @@
 import React from "react";
+import pp from "../media/images/pp.png"
 
 import '../CSS/Profile.css';
-import pp from '../media/images/pp.png'
+
 
 function Editpp() {
     return (

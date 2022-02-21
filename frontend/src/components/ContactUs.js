@@ -1,6 +1,7 @@
 import React from "react";
 import contactus from '../media/images/contactus.png'
 import '../CSS/ContactUs.css'
+import { Link } from "react-router-dom";
 
 function ContactUs() {
     return (
@@ -21,7 +22,7 @@ function ContactUs() {
                     https://www.facebook.com/Nahdamedicalcenter
                 </p>
                 <h1 className="left_header5">مركز النهضة الطبى</h1>
-                <button className="button">أحجز موعداً</button>
+                <Link to="/booking"> <button className="button">أحجز موعداً</button></Link>
             </div>
         </>
     );
