@@ -22,10 +22,12 @@ import appointments from './components/appointments'
 import Dr_Profile from "./components/Dr_profile";
 
 
+
 // import Dr_Profile from "./components/Dr_profile";
 import Booking from "./components/booking";
 
 import Message from "./components/Message";
+
 
 
 
@@ -39,11 +41,6 @@ export default class App extends Component {
             <NavBar />
             <Switch>
               <Route path={"/"} exact component={HomePage} />
-
-
-              <Route path={"/DrProfile"} exact component={Dr_Profile} />
-
-
               <Route path={"/dr"} exact component={Dr_Profile} />
               <Route path={"/booking"} exact component={Booking} />
               <Route path={"/Home"} exact component={HomePage} />
