@@ -1,7 +1,7 @@
 import React from "react";
 import avatar from '../media/images/avatar.png';
 import '../CSS/message.css';
-function Login() {
+export default function Message() {
     return (
 <>
 
