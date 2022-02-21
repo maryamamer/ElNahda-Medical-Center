@@ -6,7 +6,7 @@ import {
     AUTHENTICATED_FAIL,
     USER_LOADED_SUCCESS,
     USER_LOADED_FAIL,
-    LOGOUT
+    LOGOUT,
 } from './types';
 
 export const load_user = () => async dispatch => {

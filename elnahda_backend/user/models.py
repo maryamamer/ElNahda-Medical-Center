@@ -166,6 +166,8 @@ class Customuser(AbstractUser):
 class Appointment(models.Model):
     id=models.AutoField(primary_key=True)
     date = models.DateTimeField(auto_now_add=True)
+    message=models.TextField(null=True)
+    
     
 class PatientAppointment(models.Model):
     app_id = models.ForeignKey(Appointment, on_delete=models.CASCADE)
