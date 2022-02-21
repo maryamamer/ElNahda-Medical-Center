@@ -7,13 +7,14 @@ import slide3 from "../media/images/slide-3.jpg";
 function AboutUs() {
     return (
         <>
+
          
             <div className="parent container d-flex justify-content-center align-items-center h-100">
               <div className="row ">
                   <div className="col col-md-6"> 
                   <h1 className="center_header text-dark">عنّا</h1>
                   <p className="centered">
-                    أول واحدث مجمع طبى متكامل بالنهضة
+    أول واحدث مجمع طبى متكامل بالنهضة
                     صفوة من كبار الاستشاريين والأخصائيين فى جميع التخصصات وتشمل
                     عيادتنا
                     مركز النهضة الطبى يوفر لك عيادات خارجية شاملة جميع التخصصات
@@ -53,6 +54,7 @@ function AboutUs() {
 
               <img src={slide2} alt="Lab"  />
             </div>
+
             <div className="carousel-item">
               <img src={slide3} alt="Emergcy" />
 
@@ -73,6 +75,7 @@ function AboutUs() {
                             </div>
               </div>
               </div>
+
         </>
     );
 }
