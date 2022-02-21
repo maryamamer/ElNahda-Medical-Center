@@ -12,7 +12,7 @@
   margin-top: 5%;
 }
 
-.div1
+.divDoctor
 {  
 border: 10px solid #FCA311;
 width: 300px;
@@ -28,17 +28,6 @@ box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
   margin-left: 20%;
 }
 
-.img2 {
-  width: 200px;
-  height: 400px;
-  margin-left: 30%;
-}
-
-.img3 {
-  width: 250px;
-  height: 400px;
-  margin-left: 5%;
-}
 
 .overview{
   background-color: white;
@@ -58,7 +47,7 @@ box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
   text-align: center;
 } 
 
-.div1:hover > div
+.divDoctor:hover > div
   {
     transform: translateY(0%);
   } 

@@ -125,7 +125,7 @@ class Customuser(AbstractUser):
 #     )
 #     status =  models.CharField(max_length=30, choices=marital_status) 
 
-   
+
     
 class Doctor(models.Model):
     id=models.AutoField(primary_key=True)
@@ -159,3 +159,5 @@ class Doctor(models.Model):
     #     jsonResponse = json.loads(uploadedImageInfo.text)
     #     self.image = jsonResponse["data"]["display_url"]
     #     super().save()
+
+    

@@ -20,20 +20,20 @@ import prescription from "./components/prescription"
 import appointments from './components/appointments'
 import Dr_Profile from "./components/Dr_profile";
 
+import { Provider } from 'react-redux';
+import store from './store';
 
 export default class App extends Component {
   render() {
     return (
       <div className="App">
-
+        <Provider store={store}>
         <Router>
-          <AuthProvider>
             <NavBar />
-          </AuthProvider>
 
           <Switch>
-            <AuthProvider>
-              <Route path={"/"} exact component={Dr_Profile} />
+              <Route path={"/"} exact component={HomePage} />
+              <Route path={"/DrProfile"} exact component={Dr_Profile} />
               <Route  path={"/Home"} exact component={HomePage} />
               <Route path={"/ContactUs"} exact component={ContactUs} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
@@ -44,16 +44,16 @@ export default class App extends Component {
               <Route path={"/prescription"} exact component={prescription} />
               <Route path={"/appointments"} exact component={appointments} />
               
-              <PrivateRoute path={"/ProfilePage"} exact component={ProfilePage} />
+              <Route path={"/ProfilePage"} exact component={ProfilePage} />
 
               <Route path={"/Login"} exact component={Login} />
-            </AuthProvider>
             <Route path={"/Forget"} exact component={Forget} />
 
           </Switch>
           <Footer />
 
         </Router>
+        </Provider>
       </div>
     );
   }

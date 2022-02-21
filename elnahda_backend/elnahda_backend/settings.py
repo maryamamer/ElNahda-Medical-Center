@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'user.apps.UserConfig',
     'corsheaders',
-    'rest_framework_simplejwt.token_blacklist'
+    'rest_framework_simplejwt.token_blacklist', 
+    'djoser',
+    'social_django',
+    'rest_framework_simplejwt',
 ]
 
 REST_FRAMEWORK = {

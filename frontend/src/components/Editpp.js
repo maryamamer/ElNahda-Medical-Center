@@ -1,6 +1,7 @@
 import React from "react";
 
 import '../CSS/Profile.css';
+import pp from '../media/images/pp.png'
 
 function Editpp() {
     return (
@@ -70,16 +71,12 @@ function Editpp() {
                             <br> </br>
                             <br> </br>
                             <br> </br>
-                            <li class="list-group-item d-flex  align-items-center flex-wrap">
-                              
-                           
-                              
+                            <li class="list-group-item d-flex  align-items-center flex-wrap">          
                                 <a href="#">سجل المريض</a>
                             </li>
                         </ul>
                     </div>
-                </div>
-         
+                </div>    
             <div class="row" />
 
 
