@@ -56,7 +56,9 @@ export default function Dr_Profile() {
           </div>
           <div className="book m-5 p-3 text-center">
             <i className="fas fa-calendar fa-2x"></i>
-            <Link to="book.html">
+
+            <Link to="/booking">
+
               <input
                 type="button"
                 className="btn btn-primary"
@@ -174,7 +176,9 @@ export default function Dr_Profile() {
                         className="mr-1"
                       />
                       <label for="subscribe">
-                        Subscribe me to the newlettter
+
+                        تابعنا ﻵخر المستجدات
+
                       </label>
                     </div>
                     <div className="form-group">

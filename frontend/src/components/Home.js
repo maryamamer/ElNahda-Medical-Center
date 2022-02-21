@@ -27,6 +27,7 @@ export default class HomePage extends React.Component {
             <li data-target="#hero" data-slide-to="0" className="active"></li>
             <li data-target="#hero" data-slide-to="1"></li>
             <li data-target="#hero" data-slide-to="2"></li>
+            
 
           </ul>
 
@@ -38,7 +39,9 @@ export default class HomePage extends React.Component {
 
               <div className="carousel-caption">
                 <h2>مرحباً بكم في مركز النهضة الطبي</h2>
-                <p>معكم لحظة بلحظة!</p>
+                <p>
+                  !معكم لحظة بلحظة</p>
+                  <p>يومياً طوال أيام الأسبوع ال24 ساعة</p>
               </div>
             </div>
             <div className="carousel-item">
@@ -47,9 +50,6 @@ export default class HomePage extends React.Component {
             </div>
             <div className="carousel-item">
               <img src={slide3} alt="Emergcy" width="2000" height="600" />
-
-            </div>
-            <div className="carousel-item">
 
             </div>
           </div>
@@ -237,8 +237,8 @@ export default class HomePage extends React.Component {
           </div>
         </section>
         {/* <!-- ======= Frequently Asked Questioins Section ======= --> */}
-        <section id="faq" className="faq section-bg">
-          <div className="container" data-aos="fade-up">
+        <section id="faq" className="faq section-bg ">
+          <div className="container">
             <div className="section-title">
               <h2>أسئلة تهمك</h2>
               <p>هنا ستجد إجابة لكل الأسئلة التي تدور في بالك </p>
@@ -247,25 +247,25 @@ export default class HomePage extends React.Component {
             <ul className="faq-list text-right">
               <li>
                 <div
-                  data-bs-toggle="collapse"
-                  className="collapsed question"
-                  to="#faq1"
+                  data-toggle="collapse"
+                  data-target="#faq1"
                 >
                   ماهي مواعيدنا؟{" "}
                   <FaAngleDown className="bi bi-chevron-down icon-show" />
                   <FaAngleUp className="bi bi-chevron-up icon-close" />
+                 
 
                 </div>
-                <div id="faq1" className="collapse" data-bs-parent=".faq-list">
-                  <p>نحن متواجدن ال 24 ساعة يومياً</p>
+              
+                <div id="faq1" className="collapse" data-parent=".faq-list">
+                <p>نحن متواجدن ال 24 ساعة يومياً</p>                 
                 </div>
               </li>
 
               <li>
                 <div
-                  data-bs-toggle="collapse"
-                  to="#faq2"
-                  className="collapsed question"
+                  data-toggle="collapse"
+                  data-target="#faq2"
                 >
                   ماهي الأقسام المتاحة لدينا؟{" "}
                   <FaAngleDown className="bi bi-chevron-down icon-show" />
@@ -286,9 +286,8 @@ export default class HomePage extends React.Component {
 
               <li>
                 <div
-                  data-bs-toggle="collapse"
-                  to="#faq3"
-                  className="collapsed question"
+                  data-toggle="collapse"
+                  data-target="#faq3"
                 >
                   ماهي إجراءات السلامة التي يتخذها المركز الطبي؟{" "}
 
