@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../CSS/AboutUs.css";
 import slide1 from "../media/images/slide-1.jpg";
 import slide2 from "../media/images/slide-2.jpg";
@@ -191,6 +192,7 @@ function AboutUs() {
       </section>
     </>
   );
+
 }
 
 export default AboutUs;

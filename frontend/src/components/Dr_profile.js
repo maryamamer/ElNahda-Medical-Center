@@ -56,7 +56,9 @@ export default function Dr_Profile() {
           </div>
           <div className="book m-5 p-3 text-center">
             <i className="fas fa-calendar fa-2x"></i>
+
             <Link to="/booking">
+
               <input
                 type="button"
                 className="btn btn-primary"
@@ -70,6 +72,7 @@ export default function Dr_Profile() {
           <div className="d-card">
             <div className="info">
               <h6>
+
                 <br /> &nbsp; الهاتف <BsFillTelephoneOutboundFill />
                 : 02-10293792382
                 <br />  &nbsp; <BsFillEnvelopeFill/>الميل :
@@ -77,6 +80,7 @@ export default function Dr_Profile() {
                 <br /> <BsBook /> &nbsp; التعليم :
                 دكتوراة من جامعة القاهرة
                 <br /> <BsFillAwardFill/> &nbsp; الانجازات : حاصل
+
                 على جائزة أفضل طبيب
               </h6>
             </div>
@@ -172,7 +176,9 @@ export default function Dr_Profile() {
                         className="mr-1"
                       />
                       <label for="subscribe">
+
                         تابعنا ﻵخر المستجدات
+
                       </label>
                     </div>
                     <div className="form-group">

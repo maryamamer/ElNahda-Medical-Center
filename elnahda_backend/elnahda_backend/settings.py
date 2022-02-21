@@ -42,18 +42,20 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'user.apps.UserConfig',
     'corsheaders',
-    'rest_framework_simplejwt.token_blacklist'
+    'rest_framework_simplejwt.token_blacklist',
+    'djoser',
+    'social_django',
+    'rest_framework_simplejwt',
 ]
 
 REST_FRAMEWORK = {
- 
+
     'DEFAULT_AUTHENTICATION_CLASSES': (
-      
+
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 
 }
-
 
 
 SIMPLE_JWT = {
@@ -129,7 +131,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ElNahda_center',
         'USER': 'postgres',
-        'PASSWORD': 'maryam123',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -190,6 +192,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 
 
-AUTH_USER_MODEL = 'user.Customuser' # Add this
+AUTH_USER_MODEL = 'user.Customuser'  # Add this
 
 # AUTH_USER_MODEL = 'user.Users'

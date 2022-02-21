@@ -1,64 +1,59 @@
-import React,{useState,useEffect}from "react";
-import  New  from '../media/images/New.png'
-import  Ali  from '../media/images/ALi.png'
+import React, { useState, useEffect } from "react";
+import New from '../media/images/New.png'
+import Ali from '../media/images/ALi.png'
 import axios from "axios"
-import  Nada  from '../media/images/Nada.png'
+import Nada from '../media/images/Nada.png'
 import '../CSS/Doctors.css'
-
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from "react-redux";
 
 
 function Doctors() {
-    const [doctors,setdoctor] = useState([]);
+    const [doctors, setdoctor] = useState([]);
 
-    useEffect(() => { 
+    useEffect(() => {
         axios.get('/doctors')
-        .then(res => setdoctor(res.data))
-        .catch((err) => console.log(err));
+            .then(res => setdoctor(res.data))
+            .catch((err) => console.log(err));
 
 
-     });
+    });
 
-
+    const apps =useSelector((state)=>state.addapp)
+    console.log(apps.app.date)
     return (
         <>
-        
-            <div className="container-fluid">
-                <div className="row justify-content-around">
-                    <div className="col-4-md">
-                        <form>
-                            <input className="search" type="search" placeholder="Search" />
-                        </form>
-                    </div>
-                </div>
-                <div className="row justify-content-around OuterDiv">
-                    {
-                    doctors.map((doctor,i) => { 
-                    return (
-                        <>
-                         <div className="col-4-md div1" >
-                        <img className="img1" src={New} alt="Doctors" />
-                        <div className="overview justify-content-evenly">
-                            <h2>{doctor.fullname}</h2>
-                            <p> {doctor.specialization}</p>
-                            <p>التقييم</p>
-                        </div>
-                    </div>
 
-                    <div className="col-4-md div1">
-                        <img className="img2" src={`${doctor.image}`} />
-                    </div>
-                    {/* <div className="col-4-md div1">
-                        <img className="img3" src={Nada} alt="Nada" />
-                    </div> */}
-                    </>
-                    )}
-                    
-                    )
-                   
-                   
-}
+            <div classNameName="container-fluid">
+                <div className="row justify-content-around">
+                    <form>
+                        <input className="search" type="search" placeholder="Search" />
+                    </form>
                 </div>
-                    
+                <div className="container-fluid">
+                    <div className="row m-5">
+                        {
+                            doctors.map((doctor, i) => {
+                                return (
+                                    <>
+                                        <div className="col-md-3">
+                                            <Link to= "/DrProfile">
+                                            <div className="divDoctor">
+                                                <img className="img1" src={`${doctor.image}`} />
+                                                <div className="overview justify-content-evenly">
+                                                    <h2>{doctor.fullname}</h2>
+                                                    <p> {doctor.specialization}</p>
+                                                    <p>التقييم</p>
+                                                </div>
+                                            </div>
+                                            </Link>
+                                        </div>
+                                    </>
+                                )
+                            }
+                            )}
+                    </div>
+                </div>
             </div>
 
         </>
