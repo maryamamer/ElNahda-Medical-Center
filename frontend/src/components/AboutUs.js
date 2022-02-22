@@ -1,4 +1,5 @@
 import React from "react";
+
 import "../CSS/AboutUs.css";
 import slide1 from "../media/images/slide-1.jpg";
 import slide2 from "../media/images/slide-2.jpg";
@@ -9,13 +10,16 @@ import nurse from "../media/images/icon-nurses.png";
 import staff from "../media/images/icon-support-staff.png";
 
 
+
 import CountUp from 'react-countup';
 function AboutUs() {
   return (
     <>
       <div className="parent container d-flex justify-content-center align-items-center h-100">
         <div className="row ">
+
           <div className="col col-md-6 section-title">
+
             <h1 className="center_header text-dark">عنّا</h1>
             <p className="centered">
               أول واحدث مجمع طبى متكامل بالنهضة صفوة من كبار الاستشاريين
@@ -72,6 +76,7 @@ function AboutUs() {
               >
                 <span className="carousel-control-next-icon"></span>
               </a>
+
             </div>
           </div>
         </div>
@@ -162,10 +167,12 @@ function AboutUs() {
             </div>
           </div>
         </div>
+
       
       </section>
     </>
   );
+
 }
 
 export default AboutUs;

@@ -2,6 +2,7 @@
   font-family: Nav;
   src: url("../Fonts/Cairo/Cairo-VariableFont_wght.ttf");
 }
+
 .welcome {
   background-color: #7dc6ff;
   height: 80px;
@@ -13,8 +14,10 @@
   padding: 30px;
 }
 .doc-det {
+
   position: relative;
   text-align: center;
+
   z-index: 1;
 }
 .doc-det > svg {
@@ -31,6 +34,7 @@
 position: relative;
 
 
+
   width: 280px;
   height: 250px;
 
@@ -42,6 +46,7 @@ position: relative;
 }
 .stars .star {
   position: relative;
+
   fill: yellow;
   margin: 3px;
   margin-top: 2%;
@@ -52,6 +57,7 @@ position: relative;
   display: flex;
   float: right;
   text-align: right;
+
   margin:10px;
 }
 .info > h6 {
@@ -87,6 +93,7 @@ padding: 30px;
     color:white;
   
 }
+
 .book{
    top:150px;
    position: relative;
