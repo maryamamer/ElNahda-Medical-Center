@@ -1,10 +1,14 @@
+
+
 import React from "react";
 import pp from "../media/images/pp.png";
 import "../CSS/Profile.css";
 
+
 import { Link } from "react-router-dom";
 
 function ProfilePage() {
+
   return (
     <>
       <div className="flex-container">
@@ -27,6 +31,7 @@ function ProfilePage() {
                       <p className="text-muted font-size-sm">الفيوم ,مصر</p>
 
                       <button className="btn btn-outline-primary">رسالة</button>
+
                     </div>
                   </div>
                 </div>
@@ -123,7 +128,9 @@ function ProfilePage() {
                         <div className="card-body">
                             <div className="row">
 
+
                                 <div className="col-md-9 text-secondary">
+
                                
                                 </div>
                                 <div className="col-md-3">

@@ -71,6 +71,7 @@ const regLinks = () => (
   
   return (
     <>
+   
       <div className="row text-right ">
         <div className="col-md-3 ">
           <div className="doc-det">

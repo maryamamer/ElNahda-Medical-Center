@@ -13,6 +13,8 @@ import { FaAngleUp } from "react-icons/fa";
 
 export default class HomePage extends React.Component {
   render() {
+
+
     return (
       <>
         <body>
@@ -23,6 +25,7 @@ export default class HomePage extends React.Component {
               <li data-target="#hero" data-slide-to="1"></li>
               <li data-target="#hero" data-slide-to="2"></li>
             </ul>
+
 
             {/* <!-- The slideshow --> */}
             <div className="carousel-inner">

@@ -47,10 +47,10 @@ const Chatbot = (props) => {
               message: 'السلام عليكم',
               trigger: 'q-firstname',
             },
-            /* Paste */
+          
             {
               id: 'q-firstname',
-              message: 'ما اسمك؟',
+              message: 'كيف حالك ؟',
               trigger: 'firstname',
             },
             {
