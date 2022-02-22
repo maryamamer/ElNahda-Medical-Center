@@ -22,6 +22,9 @@ import logout from "./components/logout";
 import prescription from "./components/prescription"
 import appointments from './components/appointments'
 import Dr_Profile from "./components/Dr_profile";
+import Message from "./components/Message";
+import Chatbot from './components/chatbot/Chatbot'
+
 
 
 
@@ -43,13 +46,20 @@ export default class App extends Component {
             <NavBar />
 
           <Switch>
+<<<<<<< HEAD
               <Route path={"/"} exact component={HomePage} />
               <Route path={"/dr"} exact component={Dr_Profile} />
               <Route path={"/booking"} exact component={Booking} />
 
+=======
+            <AuthProvider>
+              <Route path={"/"} exact component={Dr_Profile} />
+              
+>>>>>>> nada
               <Route  path={"/Home"} exact component={HomePage} />
 
               <Route path={"/ContactUs"} exact component={ContactUs} />
+              <Route path={"/ContactUs"} exact component={Chatbot} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
               <Route path={"/Logout"} exact component={logout} />
               <Route path={"/Editpp"} exact component={Editpp} />
@@ -57,7 +67,13 @@ export default class App extends Component {
               <Route path={"/patientPortal"} exact component={patient_portal} />
               <Route path={"/prescription"} exact component={prescription} />
               <Route path={"/appointments"} exact component={appointments} />
+<<<<<<< HEAD
               <Route path={"/ProfilePage"} exact component={ProfilePage} />
+=======
+              <Route path={"/Message"} exact component={Message} />
+              <PrivateRoute path={"/ProfilePage"} exact component={ProfilePage} />
+
+>>>>>>> nada
               <Route path={"/Login"} exact component={Login} />
               <Route path={"/Message"} exact component={Message} />
               <Route path={"/Forget"} exact component={Forget} />
