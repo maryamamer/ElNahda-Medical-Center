@@ -71,7 +71,7 @@ export default function Dr_Profile() {
             <div className="info">
               <h6>
 
-                <br /> &nbsp; الهاتف <BsFillTelephoneOutboundFill />
+                <br /> &nbsp;<BsFillTelephoneOutboundFill /> الهاتف 
                 : 02-10293792382
                 <br />  &nbsp; <BsFillEnvelopeFill/>الميل :
                 d@gmail.com

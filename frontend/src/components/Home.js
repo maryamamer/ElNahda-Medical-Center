@@ -23,15 +23,23 @@ export default class HomePage extends React.Component {
         <div id="hero" className="carousel slide" data-ride="carousel">
           {/* <!-- Indicators --> */}
           <ul className="carousel-indicators">
-            <li data-target="#hero" data-slide-to="0" className="active"></li>
+            <li data-target="#hero" data-slide-to="2" ></li>
             <li data-target="#hero" data-slide-to="1"></li>
-            <li data-target="#hero" data-slide-to="2"></li>
+            <li data-target="#hero" data-slide-to="0" className="active"></li>
             
 
           </ul>
 
           {/* <!-- The slideshow --> */}
           <div className="carousel-inner">
+          <div className="carousel-item">
+              <img src={slide3} alt="Emergcy" width="2000" height="600" />
+
+            </div>
+            <div className="carousel-item">
+
+              <img src={slide2} alt="Lab" width="2000" height="600" />
+            </div>
             <div className="carousel-item active">
 
               <img src={slide1} alt="Dr" width="2000" height="600" />
@@ -43,24 +51,18 @@ export default class HomePage extends React.Component {
                   <p>يومياً طوال أيام الأسبوع ال24 ساعة</p>
               </div>
             </div>
-            <div className="carousel-item">
-
-              <img src={slide2} alt="Lab" width="2000" height="600" />
-            </div>
-            <div className="carousel-item">
-              <img src={slide3} alt="Emergcy" width="2000" height="600" />
-
-            </div>
+            
+            
           </div>
 
           {/* <!-- Left and right controls --> */}
-
-          <a className="carousel-control-prev" href="#hero" data-slide="prev">
-            <span className="carousel-control-prev-icon"></span>
-          </a>
           <a className="carousel-control-next" href="#hero" data-slide="next">
             <span className="carousel-control-next-icon"></span>
           </a>
+          <a className="carousel-control-prev" href="#hero" data-slide="prev">
+            <span className="carousel-control-prev-icon"></span>
+          </a>
+          
 
         </div>
 
@@ -220,14 +222,16 @@ export default class HomePage extends React.Component {
                 <br />
                 <ul>
                   <li className="description2">
-
-                    خدمة 24 ساعة يومياً<FaCheckDouble />
+                  <FaCheckDouble />
+                    خدمة 24 ساعة يومياً
                   </li>
                   <li className="description2">
-                    أكفأ الأطباء والمتخصصين<FaCheckDouble />
+                  <FaCheckDouble />
+                    أكفأ الأطباء والمتخصصين
                   </li>
                   <li className="description2">
-                    أحدث المعدات<FaCheckDouble />
+                  <FaCheckDouble />
+                    أحدث المعدات
 
                   </li>
                 </ul>
@@ -249,11 +253,12 @@ export default class HomePage extends React.Component {
                   data-toggle="collapse"
                   data-target="#faq1"
                 >
-                  ماهي مواعيدنا؟{" "}
-                  <FaAngleDown className="bi bi-chevron-down icon-show" />
+                   <FaAngleDown className="bi bi-chevron-down icon-show" />
                   <FaAngleUp className="bi bi-chevron-up icon-close" />
                  
 
+                  ماهي مواعيدنا؟{" "}
+                 
                 </div>
               
                 <div id="faq1" className="collapse" data-parent=".faq-list">
@@ -266,10 +271,11 @@ export default class HomePage extends React.Component {
                   data-toggle="collapse"
                   data-target="#faq2"
                 >
-                  ماهي الأقسام المتاحة لدينا؟{" "}
-                  <FaAngleDown className="bi bi-chevron-down icon-show" />
+                   <FaAngleDown className="bi bi-chevron-down icon-show" />
                   <FaAngleUp className="bi bi-chevron-up icon-close" />
 
+                  ماهي الأقسام المتاحة لدينا؟{" "}
+                 
                 </div>
                 <div id="faq2" className="collapse" data-bs-parent=".faq-list">
                   <p>
@@ -288,11 +294,12 @@ export default class HomePage extends React.Component {
                   data-toggle="collapse"
                   data-target="#faq3"
                 >
-                  ماهي إجراءات السلامة التي يتخذها المركز الطبي؟{" "}
-
                   <FaAngleDown className="bi bi-chevron-down icon-show" />
                   <FaAngleUp className="bi bi-chevron-up icon-close" />
 
+                  ماهي إجراءات السلامة التي يتخذها المركز الطبي؟{" "}
+
+                  
                 </div>
                 <div id="faq3" className="collapse" data-bs-parent=".faq-list">
                   <p>

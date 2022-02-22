@@ -17,12 +17,24 @@ export default function Footer() {
       >
         <div className="container">
           <div className="row ">
+            
+            <div className=" col-md-6 ftco-footer-widget mb-4">
+              <h1 className="ftco-heading-2 text-right text-light">
+                مركز النهضة الطبي{" "}
+              </h1>
+              <h6 className="text-right text-light" dir="rtl">
+                المركز مجهز بأحدث الأجهزة وتقنيات الكشف والعلاج ويضم كل التخصصات
+                الطبية لخدمة جميع الحالات المرضية على يد نخبة من أفضل الأساتذة
+                والمختصين.
+              </h6>
+            </div>
             <div className="col-md-6 ftco-footer-widget mb-4">
               <h2
-                class="ftco-heading-2 text-right text-light"
+                class="ftco-heading-2 text-light text-right"
                 style={{
                   "margin-bottom": "5px!important",
-                  "padding-right": "25px!important",
+                  "padding-right": "55px",
+                  
                 }}
               >
                 للإستفسار
@@ -36,7 +48,7 @@ export default function Footer() {
                       target="_blank"
                       to=""
                     >
-                      العامرية -النهضة-كوبري شربات-اعلي صيدلية غباشي{" "} <BsJoystick />
+                     <BsJoystick /> العامرية -النهضة-كوبري شربات-اعلي صيدلية غباشي{" "} 
                     </Link>
                   </li>
                   <li >
@@ -44,7 +56,7 @@ export default function Footer() {
                       <span
                         className="text text-light" 
                       >
-                        03-3475160 / 01050600505 / 01050600606 <BsFillTelephoneOutboundFill />
+                       <BsFillTelephoneOutboundFill /> 03-3475160 / 01050600505 / 01050600606 
                       </span>
                     </a>
                   </li>
@@ -54,7 +66,7 @@ export default function Footer() {
                         className="text text-light"
                        
                       >
-                        Info@gmail.com <BsFillEnvelopeFill />
+                        <BsFillEnvelopeFill /> Info@gmail.com
                       </span>
                     </a>
                   </li>
@@ -64,25 +76,17 @@ export default function Footer() {
                         className="text text-light"
                        
                       >
-                        مركز النهضة الطبي <BsFacebook />
+                        <BsFacebook /> مركز النهضة الطبي
                       </span>
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className=" col-md-6 ftco-footer-widget mb-4">
-              <h1 className="ftco-heading-2 text-right text-light">
-                مركز النهضة الطبي{" "}
-              </h1>
-              <h6 className="text-right text-light" dir="rtl">
-                المركز مجهز بأحدث الأجهزة وتقنيات الكشف والعلاج ويضم كل التخصصات
-                الطبية لخدمة جميع الحالات المرضية على يد نخبة من أفضل الأساتذة
-                والمختصين.
-              </h6>
-            </div>
           </div>
+          
         </div>
+        
         <hr />
 
         <div className="copyright text-center text-light">
