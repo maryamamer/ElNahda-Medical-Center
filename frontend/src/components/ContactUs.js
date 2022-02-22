@@ -9,14 +9,10 @@ import "../CSS/ContactUs.css";
 
 
 function ContactUs() {
-  return (
-    <>
-      {/* <div classNameName="container">
-                </p>
-                <h1 classNameName="left_header5">مركز النهضة الطبى</h1>
-                <Link to="/booking"> <button classNameName="button">أحجز موعداً</button></Link>
-            </div> */}
-      <div className="container text-right">
+
+    return (
+        <>
+             <div className="container text-right">
         <div className="col-lg-12 px-lg-0 py-5 d-flex flex-row flex-wrap  justify-content-between ">
           <div className="col-lg-5 p-0 d-flex flex-column flex-wrap  justify-content-between section-title">
             <h1 className="text-center text-dark mb-5 ">تواصل معنا</h1>
@@ -32,6 +28,8 @@ function ContactUs() {
                     />
                   </span>
                 </p>
+
+
               </div>
             </div>
             <div className="col-lg-12 p-0 pb-4 speciality-item d-flex flex-row flex-wrap align-items-center justify-content-between text-right">
@@ -70,8 +68,11 @@ function ContactUs() {
         </div>
       </div>
       
+
+
     </>
   );
+
 }
 
 export default ContactUs;
