@@ -6,9 +6,10 @@ import Auth from "../context/auth";
 import Nurse from '../media/images/Nurse.jpeg';
 import '../CSS/Login.css';
 import React, { useState, useContext } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect,useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../actions/auth';
+
 import axios from 'axios';
 /*
 function Login() {
@@ -18,6 +19,7 @@ const Login = ({ login, isAuthenticated }) => {
         email: '',
         password: ''
     });
+    const history = useHistory();
 
     const { email, password } = formData;
 
@@ -34,6 +36,7 @@ const Login = ({ login, isAuthenticated }) => {
 
     if (isAuthenticated) {
         return <Redirect to='/' />
+        
     }
     return (
 

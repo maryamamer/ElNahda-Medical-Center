@@ -14,10 +14,14 @@
   padding: 30px;
 }
 .doc-det {
+<<<<<<< HEAD
+  text-align: right;
+=======
 
   position: relative;
   text-align: center;
 
+>>>>>>> master
   z-index: 1;
 }
 .doc-det > svg {
@@ -31,8 +35,6 @@
 .doc-det > img {
   z-index: 1;
 
-position: relative;
-
 
 
   width: 280px;
@@ -45,19 +47,24 @@ position: relative;
 
 }
 .stars .star {
+<<<<<<< HEAD
+=======
   position: relative;
 
+>>>>>>> master
   fill: yellow;
   margin: 3px;
   margin-top: 2%;
  
 }
 .info {
-  position: relative;
   display: flex;
+<<<<<<< HEAD
+=======
   float: right;
   text-align: right;
 
+>>>>>>> master
   margin:10px;
 }
 .info > h6 {

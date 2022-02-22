@@ -8,12 +8,25 @@ import '../CSS/NavBar.css';
 
 
 import React, { Fragment, useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect ,useHistory} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
+import jwtDecode from "jwt-decode";
+
+
 
 const Navbar = ({ logout, isAuthenticated }) => {
+  let token = localStorage.getItem('access')
+  let token_refresh = localStorage.getItem('refresh')
+ 
+  if (isAuthenticated){
+    const user=jwtDecode(token)
+    console.log(user)
+  }
+
     const [redirect, setRedirect] = useState(false);
+    const history = useHistory();
+    
 
     const logout_user = () => {
         logout();
@@ -21,27 +34,33 @@ const Navbar = ({ logout, isAuthenticated }) => {
     };
 
     const guestLinks = () => (
+      
         <Fragment>
+          
             <li className='nav-item'>
-                <Link className='nav-link' to='/login'> تسجيل الدخول </Link>
+                <a className='nav-link' href='/login'> تسجيل الدخول </a>
             </li>
             {/* <li className='nav-item'>
                 <Link className='nav-link' to='/signup'>Sign Up</Link>
             </li> */}
+          
         </Fragment>
     );
+    
+       
 
     const authLinks = () => (
         <>
+      
         <li className='nav-item'>
-            <Link className='nav-link' to='/ProfilePage'> الصفحة الشخصية</Link>
+            <a className='nav-link'  href='/Logout' onClick={logout_user}> تسجيل خروج</a>
         </li>
         <li className='nav-item'>
-            <Link className='nav-link' to='/Logout' onClick={logout_user}> تسجيل خروج</Link>
+            <a className='nav-link' href='/ProfilePage'> الصفحة الشخصية</a>
         </li>
         </>
     );
-
+      
 
     /* function NavBar() { */
     /* let { user, logoutuser } = useContext(Auth) */
@@ -80,6 +99,10 @@ const Navbar = ({ logout, isAuthenticated }) => {
                                 </li>
 
                         } */}
+
+                            {token && token_refresh ? authLinks() : guestLinks()}
+                           
+
                         <li className="nav-item">
                                 <Link className="nav-link" to="/Home">الرئيسية </Link>
                             </li>
@@ -104,7 +127,15 @@ const Navbar = ({ logout, isAuthenticated }) => {
                             
 
                         </ul>
-                       
+                        <Link className="navbar-brand" to="/">
+                            <img src={New}
+                                className="img-responsive logo"
+                                width="100"
+                                height="80"
+                                alt="New"
+                            />
+                        </Link>
+
                     </div>
                 </nav>
                 {redirect ? <Redirect to='/' /> : <Fragment></Fragment>}
@@ -113,7 +144,8 @@ const Navbar = ({ logout, isAuthenticated }) => {
     );
 }
 const mapStateToProps = state => ({
-    isAuthenticated: state.auth.isAuthenticated
+    isAuthenticated: state.auth.isAuthenticated,
+  
 });
 
 export default connect(mapStateToProps, { logout })(Navbar);

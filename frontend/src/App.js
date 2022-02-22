@@ -38,8 +38,8 @@ import Chatbot from './components/chatbot/Chatbot'
 // import Dr_Profile from "./components/Dr_profile";
 
 
-export default class App extends Component {
-  render() {
+export default function App (props) {
+ 
     return (
       <div className="App">
         <Router>
@@ -47,13 +47,10 @@ export default class App extends Component {
             <NavBar />
 
           <Switch>
-
               <Route path={"/"} exact component={HomePage} />
-              <Route path={"/dr"} exact component={Dr_Profile} />
-              <Route path={"/booking"} exact component={Booking} />
-
-              <Route  path={"/Home"} exact component={HomePage} />
-
+              <Route path={"/dr/:id"} exact component={Dr_Profile} />
+              <Route path={"/booking/:id"} exact component={Booking} />
+              <Route path={"/Home"} exact component={HomePage} />
               <Route path={"/ContactUs"} exact component={ContactUs} />
               <Route path={"/Chatbot"} exact component={Chatbot} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
@@ -76,5 +73,5 @@ export default class App extends Component {
         </Router>
       </div>
     );
-  }
+  
 }

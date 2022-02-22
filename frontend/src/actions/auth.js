@@ -20,7 +20,7 @@ export const load_user = () => async dispatch => {
         }; 
 
         try {
-            const res = await axios.get(`/auth/users/me/`, config);
+            const res = await axios.get(`/auth/users/me`, config);
     
             dispatch({
                 type: USER_LOADED_SUCCESS,
@@ -49,7 +49,8 @@ export const login = (email, password) => async dispatch => {
 
     try {
         const res = await axios.post(`/auth/jwt/create/`, body, config);
-        console.log(res)
+        // localStorage.setItem(res.data.access)
+        // localStorage.setItem(res.data.refresh)
         /*${process.env.REACT_APP_API_URL} */
         dispatch({
             type: LOGIN_SUCCESS,

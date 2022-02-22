@@ -1,7 +1,7 @@
 
 
 import { React, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useParams } from "react-router-dom";
 import "../CSS/booking.css";
 import { add_appointment } from "../actions/appointment";
 import { connect } from 'react-redux';
@@ -9,6 +9,8 @@ import { connect } from 'react-redux';
 
 
 function Booking({ add_appointment, isAuthenticated }) {
+
+const params=useParams()
   const [formData, setFormData] = useState({
     date: '',
     message: ''
@@ -62,7 +64,8 @@ function Booking({ add_appointment, isAuthenticated }) {
               <input className="form-control text-right" type="text" name="message" value={message}
                 onChange={e => onChange(e)} id="message" placeholder="إترك رسالتك" maxlength="140" rows="7"></input>
 
-            </div>
+</div>
+            
 
             {/* <!-- Button Area--> */}
             <div className="checkbox">
