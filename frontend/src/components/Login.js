@@ -1,5 +1,3 @@
-
-
 /* import { React, useContext } from "react";
 import Nurse from '../media/images/Nurse.jpeg';
 import '../CSS/Login.css';*/
@@ -42,19 +40,18 @@ const Login = ({ login, isAuthenticated }) => {
         <>
 
 
-
             <section class="h-100" id="login">
                 <div class="container h-100 opacity-0.4;">
                     <div class="row justify-content-md-center h-100 ">
                         <div class="card-wrapper">
                             <div class="brand">
-                                <h4 class="card-title text-dark">تسجيل الدخول</h4>
+                                <h1 class="card-title text-dark">تسجيل الدخول</h1>
                             </div>
                             <div class="card-body">
 
                                 <form method="post" class="my-login-validation" novalidate onSubmit={e => onSubmit(e)} /* onSubmit={loginuser} */>
-                                    <div class="form-group">
-                                        <label for="email">اسم المسنخدم</label>
+                                    <div class="form-group ">
+                                        <label for="email " className=" text-light">اسم المستخدم</label>
                                         <input id="email" type="email" class="form-control" name="email" required value={email}
                                             onChange={e => onChange(e)} />
                                         <div class="invalid-feedback">
@@ -67,7 +64,6 @@ const Login = ({ login, isAuthenticated }) => {
                                     <label for="password" className=" text-light">كلمة السر
 
                                     </label>
-
 
                                     <input id="password" type="password" class="form-control" name="password" required data-eye value={password}
                                         onChange={e => onChange(e)} />

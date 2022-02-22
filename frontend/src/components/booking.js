@@ -75,7 +75,7 @@ function Booking({ add_appointment, isAuthenticated }) {
 
 
             <input type="reset" className="btn btn-primary" value="التراجع"/><hr />
-</div>
+              
           </form>
 
           {/* <!-- form end --> */}

@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import "../CSS/AboutUs.css";
 import slide1 from "../media/images/slide-1.jpg";
 import slide2 from "../media/images/slide-2.jpg";
@@ -9,7 +8,6 @@ import bed from "../media/images/icon-beds.png";
 import dr from "../media/images/icon-doctors.png";
 import nurse from "../media/images/icon-nurses.png";
 import staff from "../media/images/icon-support-staff.png";
-
 
 
 
