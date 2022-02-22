@@ -32,8 +32,8 @@ import Message from "./components/Message";
 
 
 
-export default class App extends Component {
-  render() {
+export default function App (props) {
+ 
     return (
       <div className="App">
         <Router>
@@ -42,8 +42,8 @@ export default class App extends Component {
 
           <Switch>
               <Route path={"/"} exact component={HomePage} />
-              <Route path={"/dr"} exact component={Dr_Profile} />
-              <Route path={"/booking"} exact component={Booking} />
+              <Route path={"/dr/:id"} exact component={Dr_Profile} />
+              <Route path={"/booking/:id"} exact component={Booking} />
               <Route path={"/Home"} exact component={HomePage} />
               <Route path={"/ContactUs"} exact component={ContactUs} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
@@ -63,5 +63,5 @@ export default class App extends Component {
         </Router>
       </div>
     );
-  }
+  
 }

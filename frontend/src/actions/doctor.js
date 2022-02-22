@@ -19,14 +19,15 @@ export const get_doctor = () => async dispatch => {
             }
 
         }
-            await axios.get('/doctors/')
+             await axios.get('/doctors/',config)
             .then((res)=>
                 dispatch({
                     type: GET_DOCTOR,
                     payload: res.data,
                    
                 })
-            )   
+            )
+            
         .catch ((err)=> {
            console.log(err)
         })

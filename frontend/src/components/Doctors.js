@@ -10,22 +10,22 @@ import { connect } from 'react-redux';
 import { get_doctor } from '../actions/doctor';
 
 
-function Doctors() {
-    const doctors =useSelector((state)=>state.doctor)
-    console.log(doctors)
-    // const [doctors, setdoctor] = useState([]);
+function Doctors(props) {
+    // const doctors =useSelector((state)=>state.doctor)
+    // console.log(doctors)
+    const [doctors, setdoctor] = useState([]);
     // setdoctor(doctor)
     // setdoctor(useSelector(state=>state.doctor.doctor))
     // console.log(doctors)
     // console.log(doctor)
 
-    // useEffect(() => {
-    //     axios.get('/doctors')
-    //         .then(res => setdoctor(res.data))
-    //         .catch((err) => console.log(err));
+    useEffect(() => {
+        axios.get('/doctors')
+            .then(res => setdoctor(res.data))
+            .catch((err) => console.log(err));
 
 
-    // });
+    });
 
     return (
         <>
@@ -43,7 +43,7 @@ function Doctors() {
                                 return (
                                     <>
                                         <div className="col-md-3">
-                                            <Link to= "/dr">
+                                            <Link to={ `/dr/${d.id}`}>
                                             <div className="divDoctor">
                                                 <img className="img1" src={`${d.image}`} alt="doctor" />
                                                 <div className="overview justify-content-evenly">

@@ -1,13 +1,14 @@
 
 import { React, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useParams } from "react-router-dom";
 import "../CSS/booking.css";
 import { add_appointment } from "../actions/appointment";
 import { connect } from 'react-redux';
 
 
-
 function Booking({ add_appointment, isAuthenticated }) {
+
+const params=useParams()
   const [formData, setFormData] = useState({
     date: '',
     message: ''
