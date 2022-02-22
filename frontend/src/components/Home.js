@@ -3,7 +3,6 @@ import slide1 from "../media/images/slide-1.jpg";
 import slide2 from "../media/images/slide-2.jpg";
 import slide3 from "../media/images/slide-3.jpg";
 import logo from "../media/images/logo.jpeg";
-import { Link } from "react-router-dom";
 import "../CSS/Home.css"
 
 import { FaCheckDouble } from "react-icons/fa";

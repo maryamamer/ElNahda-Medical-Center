@@ -3,13 +3,19 @@ import "../CSS/AboutUs.css";
 import slide1 from "../media/images/slide-1.jpg";
 import slide2 from "../media/images/slide-2.jpg";
 import slide3 from "../media/images/slide-3.jpg";
+import bed from "../media/images/icon-beds.png";
+import dr from "../media/images/icon-doctors.png";
+import nurse from "../media/images/icon-nurses.png";
+import staff from "../media/images/icon-support-staff.png";
+
+
 import CountUp from 'react-countup';
 function AboutUs() {
   return (
     <>
       <div className="parent container d-flex justify-content-center align-items-center h-100">
         <div className="row ">
-          <div className="col col-md-6">
+          <div className="col col-md-6 section-title">
             <h1 className="center_header text-dark">عنّا</h1>
             <p className="centered">
               أول واحدث مجمع طبى متكامل بالنهضة صفوة من كبار الاستشاريين
@@ -74,7 +80,7 @@ function AboutUs() {
         <div className="container">
           <div className="row">
             <div className="col-lg-12 px-lg-0 py-5 d-flex flex-row flex-wrap align-items-start justify-content-between">
-              <div className="col-lg-12 p-0">
+              <div className="col-lg-12 p-0 section-title">
                 <h1 className="text-uppercase text-center mb-5 pb-3 text-dark">
               طاقة الإستيعاب              </h1>
                
@@ -85,18 +91,10 @@ function AboutUs() {
                 <div className="col-4 col-lg-4 p-0 pr-3">
                   <div className="col-lg-12 p-0">
                     <img
-                      alt=""
-                      data-src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-beds.png"
+                      alt="icon-bed"
                       className="img-fluid lazyloaded"
-                      src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-beds.png"
+                      src={bed}
                     />
-                    <noscript>
-                      <img
-                        className="img-fluid"
-                        src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-beds.png"
-                        alt=""
-                      />
-                    </noscript>
                   </div>
                 </div>
                 <div className="col-8 col-lg-8 p-0 pr-3">
@@ -112,17 +110,10 @@ function AboutUs() {
                   <div className="col-lg-12 p-0">
                     <img
                       alt=""
-                      data-src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-doctors.png"
                       className="img-fluid lazyloaded"
-                      src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-doctors.png"
+                      src={dr}
                     />
-                    <noscript>
-                      <img
-                        className="img-fluid"
-                        src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-doctors.png"
-                        alt=""
-                      />
-                    </noscript>
+                   
                   </div>
                 </div>
                 <div className="col-8 col-lg-8 p-0 pr-3">
@@ -138,17 +129,9 @@ function AboutUs() {
                   <div className="col-lg-12 p-0">
                     <img
                       alt=""
-                      data-src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-nurses.png"
                       className="img-fluid lazyloaded"
-                      src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-nurses.png"
-                    />
-                    <noscript>
-                      <img
-                        className="img-fluid"
-                        src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-nurses.png"
-                        alt=""
-                      />
-                    </noscript>
+                      src={nurse} />
+                    
                   </div>
                 </div>
                 <div className="col-8 col-lg-8 p-0 pr-3">
@@ -163,17 +146,9 @@ function AboutUs() {
                   <div className="col-lg-12 p-0">
                     <img
                       alt=""
-                      data-src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-support-staff.png"
                       className="img-fluid lazyloaded"
-                      src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-support-staff.png"
+                      src={staff}
                     />
-                    <noscript>
-                      <img
-                        className="img-fluid"
-                        src="https://prathimahospitals.com/wp-content/uploads/2020/04/icon-support-staff.png"
-                        alt=""
-                      />
-                    </noscript>
                   </div>
                 </div>
                 <div className="col-8 col-lg-8 p-0 pr-3">
