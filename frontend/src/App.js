@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-/* import Switch from "react-switch" */
+
+import { Provider } from 'react-redux';
+import store from './store';
+
 import "./App.css";
 import NavBar from "./components/NavBar";
 import ContactUs from "./components/ContactUs";
@@ -23,21 +26,34 @@ import Message from "./components/Message";
 import Chatbot from './components/chatbot/Chatbot'
 
 
+
+
+// import Dr_Profile from "./components/Dr_profile";
+import Booking from "./components/booking";
+
+import Message from "./components/Message";
+
+
+
+
+
 export default class App extends Component {
   render() {
     return (
       <div className="App">
-
         <Router>
-          <AuthProvider>
+          <Provider store={store}>
             <NavBar />
-          </AuthProvider>
 
           <Switch>
-            <AuthProvider>
-              <Route path={"/"} exact component={Dr_Profile} />
-              
+
+              <Route path={"/"} exact component={HomePage} />
+              <Route path={"/dr"} exact component={Dr_Profile} />
+              <Route path={"/booking"} exact component={Booking} />
+
+
               <Route  path={"/Home"} exact component={HomePage} />
+
               <Route path={"/ContactUs"} exact component={ContactUs} />
               <Route path={"/ContactUs"} exact component={Chatbot} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
@@ -47,16 +63,16 @@ export default class App extends Component {
               <Route path={"/patientPortal"} exact component={patient_portal} />
               <Route path={"/prescription"} exact component={prescription} />
               <Route path={"/appointments"} exact component={appointments} />
+
               <Route path={"/Message"} exact component={Message} />
               <PrivateRoute path={"/ProfilePage"} exact component={ProfilePage} />
 
               <Route path={"/Login"} exact component={Login} />
-            </AuthProvider>
-            <Route path={"/Forget"} exact component={Forget} />
-
-          </Switch>
-          <Footer />
-
+              <Route path={"/Message"} exact component={Message} />
+              <Route path={"/Forget"} exact component={Forget} />
+            </Switch>
+            <Footer />
+          </Provider>
         </Router>
       </div>
     );

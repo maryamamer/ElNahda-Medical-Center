@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Doctor from "../media/images/Doctor.jpeg";
 import "../CSS/dr_profile.css";
-
 import { BsFillTelephoneOutboundFill} from "react-icons/bs";
 import { BsFillEnvelopeFill} from "react-icons/bs";
 import { BsFillAwardFill} from "react-icons/bs";
@@ -10,13 +9,11 @@ import { BsBook } from "react-icons/bs";
 
 
 
-
-
-
 export default function Dr_Profile() {
   return (
     <>
-      <div className="row ">
+      <div className="row text-right ">
+
         <div className="col-md-3 ">
           <div className="doc-det">
             <img src={Doctor} alt="" />
@@ -57,7 +54,9 @@ export default function Dr_Profile() {
           </div>
           <div className="book m-5 p-3 text-center">
             <i className="fas fa-calendar fa-2x"></i>
-            <Link to="book.html">
+
+            <Link to="/booking">
+
               <input
                 type="button"
                 className="btn btn-primary"
@@ -71,7 +70,7 @@ export default function Dr_Profile() {
           <div className="d-card">
             <div className="info">
               <h6>
-r
+
                 <br /> &nbsp; الهاتف <BsFillTelephoneOutboundFill />
                 : 02-10293792382
                 <br />  &nbsp; <BsFillEnvelopeFill/>الميل :
@@ -175,7 +174,9 @@ r
                         className="mr-1"
                       />
                       <label for="subscribe">
-                        Subscribe me to the newlettter
+
+                        تابعنا ﻵخر المستجدات
+
                       </label>
                     </div>
                     <div className="form-group">

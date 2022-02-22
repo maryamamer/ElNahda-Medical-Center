@@ -1,38 +1,41 @@
-import {React,useContext} from "react";
+import { React, useContext } from "react";
 import pp from '../media/images/pp.png';
 import '../CSS/Profile.css';
 import Auth from "../context/auth";
+import { Link } from "react-router-dom";
 
 function ProfilePage() {
-    let {user}=useContext(Auth)
+    let { user } = useContext(Auth)
     return (
-    
-  <>
-            
-    <div className="flex-container">
-        <div className="main-body">
 
-            <div className="row">
-                <div className="col-xl-2"/>
-                    <div className="card ">
-                        <div className="card-body">
-                            <div className="d-flex flex-column align-items-center text-center">
-                                <img src={pp} alt="Admin" className="rounded-circle" width="150" id="photo" />
-                                 <div className="mt-3">
-                                    <h4>ندى طه </h4>
-                                    <p className="text-secondary mb-1">طالبه </p>
-                                    <p className="text-muted font-size-sm">الفيوم ,مصر</p>
+        <>
 
-                                    <button className="btn btn-outline-primary">رسالة</button>
+            <div className="flex-container">
+                <div className="main-body">
+
+                    <div className="row">
+                        <div className="col-xl-2" />
+                        <div className="card ">
+                            <div className="card-body">
+                                <div className="d-flex flex-column align-items-center text-center">
+                                    <img src={pp} alt="Admin" className="rounded-circle" width={150} id="photo" />
+                                    <div className="mt-3">
+                                        <h4>ندى طه </h4>
+                                        <p className="text-secondary mb-1">طالبه </p>
+                                        <p className="text-muted font-size-sm">الفيوم ,مصر</p>
+
+                                        <button className="btn btn-outline-primary">رسالة</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="card mt-3 " style="height: 25rem;" >
-                        <ul className="list-group list-group-flush" >
-                            <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+
+                        <div className="card mt-3 " style={{ "height": "25rem" }} >
+                            <ul className="list-group list-group-flush" >
+                                <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24}
+
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round"
                                         className="feather feather-globe mr-2 icon-inline">
@@ -43,22 +46,22 @@ function ProfilePage() {
                                         </path>
                                     </svg>الموقع</h6>
 
-                            </li>
+                                </li>
 
 
-                            <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24}
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round"
                                         className="feather feather-instagram mr-2 icon-inline text-danger">
-                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <rect x="2" y="2" width={20} height={20} rx="5" ry="5"></rect>
                                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                     </svg>اﻻنستجرام</h6>
 
-                            </li>
-                            <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                </li>
+                                <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                    <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24}
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round"
                                         className="feather feather-facebook mr-2 icon-inline text-primary">
@@ -66,35 +69,37 @@ function ProfilePage() {
                                         </path>
                                     </svg>الفيس بوك </h6>
 
-                            </li>
-                            <br> </br> 
-                            <br> </br> 
-                            <br> </br>
-                            <br> </br>
-                            <br> </br>
-                            <br> </br>
-                            <li className="list-group-item d-flex  align-items-center flex-wrap">
-                              
-                           
-                              
-                                <a href="#">سجل المريض</a>
-                            </li>
-                        </ul>
+
+                                </li>
+                                <br />
+                                <br> </br>
+                                <br> </br>
+                                <br> </br>
+                                <br> </br>
+                                <br> </br>
+                                <li className="list-group-item d-flex  align-items-center flex-wrap">
+
+
+
+                                    <Link to="/patientPortal">سجل المريض</Link>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
-                </div>
-                </div>
-         
+            </div>
+
             <div className="row" >
 
 
                 <div className="col-sm-8">
-                    <div className="card " style="width: 82rem;">
+                    <div className="card " style={{"width": "82rem;"}}>
                         <div className="card-body">
                             <div className="row">
 
                                 <div className="col-sm-9 text-secondary">
-                                   {user.username}
+                                    {/* {user.username} */}
                                 </div>
                                 <div className="col-sm-3">
                                     <h6 className="mb-0">الاسم بالكامل</h6>
@@ -151,49 +156,49 @@ function ProfilePage() {
                     </div>
                 </div>
 
-</div>
-                <div className="container-fluid">
-                    <div className="col-sm-8 ">
-                        <div className="card mt-3 ">
-                            <div className="card-body p-100">
-                                <h6 className="d-flex align-items-right mb-3">هذا الشهر</h6> <i
-                                    className="material-icons text-info mr-2">التحاليل</i>
-                                    <br/>
-                                <small>فيتامين س</small>
-                                <div className="progress mb-3" style="height: 5px">
-                                    <div className="progress-bar bg-success" role="progressbar" style="width: 80%"
-                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <small>فيتامين د</small>
-                                <div className="progress mb-3" style="height: 5px">
-                                    <div className="progress-bar bg-primary" role="progressbar" style="width: 72%"
-                                        aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <small>فيتامين أ</small>
-                                <div className="progress mb-3" style="height: 5px">
-                                    <div className="progress-bar bg-danger" role="progressbar" style="width: 45%"
-                                        aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <small>فيتامين ب</small>
-                                <div className="progress mb-3" style="height: 5px">
-                                    <div className="progress-bar bg-warning" role="progressbar" style="width: 55%"
-                                        aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <small>الحديد</small>
-                                <div className="progress mb-3" style="height: 5px">
-                                    <div className="progress-bar bg-warning" role="progressbar" style="width: 50%"
-                                        aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+            </div>
+            <div className="container-fluid">
+                <div className="col-sm-8 ">
+                    <div className="card mt-3 ">
+                        <div className="card-body p-100">
+                            <h6 className="d-flex align-items-right mb-3">هذا الشهر</h6> <i
+                                className="material-icons text-info mr-2">التحاليل</i>
+                            <br />
+                            <small>فيتامين س</small>
+                            <div className="progress mb-3" style={{"height": "5px"}}>
+                                <div className="progress-bar bg-success" role="progressbar" style={{"width": "80%"}}
+                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <small>فيتامين د</small>
+                            <div className="progress mb-3" style={{"height": "5px"}}>
+                                <div className="progress-bar bg-primary" role="progressbar" style={{"width": "72%"}}
+                                    aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <small>فيتامين أ</small>
+                            <div className="progress mb-3" style={{"height": "5px"}}>
+                                <div className="progress-bar bg-danger" role="progressbar" style={{"width": "45%"}}
+                                    aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <small>فيتامين ب</small>
+                            <div className="progress mb-3" style={{"height": "5px"}}>
+                                <div className="progress-bar bg-warning" role="progressbar" style={{"width": "55%"}}
+                                    aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <small>الحديد</small>
+                            <div className="progress mb-3" style={{"height": "5px"}}>
+                                <div className="progress-bar bg-warning" role="progressbar" style={{"width": "50%"}}
+                                    aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-           
-        
-   </>
-      );  
+
+
+            </div>
+
+
+        </>
+    );
 }
 
 export default ProfilePage;
