@@ -1,20 +1,24 @@
 
 
 import { React, useState } from "react";
-import { Link,useParams } from "react-router-dom";
+import { Link,useParams,Redirect } from "react-router-dom";
 import "../CSS/booking.css";
 import { add_appointment } from "../actions/appointment";
 import { connect } from 'react-redux';
 
 
 
-function Booking({ add_appointment, isAuthenticated }) {
+function Booking({ add_appointment, isregistered }) {
 
 const params=useParams()
   const [formData, setFormData] = useState({
     date: '',
     message: ''
   });
+//   if (isregistered) {
+//     return <Redirect to='/dr' />
+    
+// }
 
   const { date, message } = formData;
 
@@ -37,7 +41,7 @@ const params=useParams()
           <p>ميعاد المقابلة</p>
 
           {/* <!-- 1st Choice Input --> */}
-          <form method="post" onSubmit={e => {onSubmit(e) 
+          <form method="post" onSubmit={e => {onSubmit(e)
           alert('تم التسجيل بنجاح')
           
           }}>
@@ -66,8 +70,10 @@ const params=useParams()
 
               <label><input type="checkbox" />الأحكام والشروط</label>
             </div>
-           
+            <a href="/dr">
             <input type="submit"  className="btn btn-success" value="التأكيد" />
+            </a>
+           
         
 
 
@@ -86,8 +92,9 @@ const params=useParams()
   );
 }
 const mapStateToProps = state => ({
-  isAuthenticated: state.auth.isAuthenticated
+  isregistered: state.addapp.isregistered
 });
+
 
 export default connect(mapStateToProps, { add_appointment })(Booking);
 

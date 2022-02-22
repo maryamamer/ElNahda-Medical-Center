@@ -9,6 +9,7 @@ import {
   ADD_APPOINTMENT,
   REM_APPOINTMENT,
   ADD_Patient_APPOINTMENT,
+  ADDED_APP
 } from "./types";
 import jwtDecode from "jwt-decode";
 
@@ -42,9 +43,39 @@ export const add_appointment = (date, message) => async (dispatch) => {
       type:"ADD_APPOINTMENT",
       payload:res.data,
   })
+
   )
   .catch((err) => console.log(err))
 }
+
+export const registered = () => async dispatch => {
+
+    const config = {
+    headers: {
+      "Content-Type": "application/json",
+       Authorization: `JWT ${localStorage.getItem("access")}`,
+       Accept: "application/json",
+    },
+  };
+  return  axios
+  .get(`/Appointments/`)
+  .then ((res)=>{
+      if (res.status===200){
+          const app=res.data
+          console.log(res.data)
+        dispatch({
+                  type:"ADDED_APP",
+                  payload:res.data,
+              })
+
+      }
+  })
+//   .then((res) => dispatch({
+//       type:"ADD_APPOINTMENT",
+//       payload:res.data,
+//   })
+  .catch((err) => console.log(err))
+};
 //   const params = useParams();
 //   const body = JSON.stringify({
 //     date: date,

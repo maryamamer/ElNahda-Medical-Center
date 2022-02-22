@@ -1,5 +1,5 @@
-import {React,useState,useEffect} from "react";
-import { Link,useParams } from "react-router-dom";
+import {React,useState,useEffect, Fragment} from "react";
+import { Link,useParams,Redirect } from "react-router-dom";
 import Doctor from "../media/images/Doctor.jpeg";
 import "../CSS/dr_profile.css";
 import { BsFillTelephoneOutboundFill} from "react-icons/bs";
@@ -7,17 +7,67 @@ import { BsFillEnvelopeFill} from "react-icons/bs";
 import { BsFillAwardFill} from "react-icons/bs";
 import { BsBook } from "react-icons/bs";
 import axios from "axios";   
+import { add_appointment } from '../actions/appointment';
+import { connect } from 'react-redux';
+import jwtDecode from "jwt-decode";
 
-export default function Dr_Profile() {
+ function Dr_Profile({ add_appointment, isregistered }) {
   const params = useParams();
   const [doctor, setdoctor] = useState({});
   console.log(params);
+  const[registered,setregistered]=useState(false)
+  const[recommend,setrecommend]=useState([])
+const token = localStorage.getItem('access')
+const user=jwtDecode(token).user_id
+ 
+  console.log(isregistered)
   useEffect(() => {
     
     axios
       .get(`/doctors/${params.id}`)
       .then((res) => setdoctor(res.data))
   },[])
+
+   function getrecommend(){
+   const res= axios
+    .get(`/doctors`)
+  res.filter((r)=>r.specialization==doctor.specialization)
+  setrecommend(res)
+  }
+  const [redirect, setRedirect] = useState(false);
+  const notregLinks = () => (
+      
+    <Fragment>
+      
+      <Link to={`/booking/${doctor.id}`}>
+
+<input
+  type="button"
+  className="btn btn-primary"
+  id="book-btn"
+  value="احجز الأن"
+/>
+</Link>
+        {/* <li className='nav-item'>
+            <Link className='nav-link' to='/signup'>Sign Up</Link>
+        </li> */}
+      
+    </Fragment>
+);
+
+   
+
+const regLinks = () => (
+ 
+
+  <input
+    type="button"
+    className="btn btn-danger"
+    id="book-btn"
+    value=" الغاء الحجز"
+  />
+
+);
   
   return (
     <>
@@ -62,16 +112,20 @@ export default function Dr_Profile() {
           </div>
           <div className="book m-5 p-3 text-center">
             <i className="fas fa-calendar fa-2x"></i>
+    
+    <Fragment>
+    {/* <Link to={`/booking/${doctor.id}`}>
 
-            <Link to={`/booking/${doctor.id}`}>
-
-              <input
-                type="button"
-                className="btn btn-primary"
-                id="book-btn"
-                value="احجز الأن"
-              />
-            </Link>
+<input
+  type="button"
+  className="btn btn-primary"
+  id="book-btn"
+  value="احجز الأن"
+/>
+</Link> */}
+ {isregistered ? regLinks() : notregLinks()}
+    </Fragment>
+           
           </div>
         </div>
         <div className="col">
@@ -84,10 +138,10 @@ export default function Dr_Profile() {
                 <br />  &nbsp; <BsFillEnvelopeFill/>الميل :
                {doctor.email}
                 <br /> <BsBook /> &nbsp; التعليم :
-                دكتوراة من جامعة القاهرة
+                {doctor.education_degree}
                 <br /> <BsFillAwardFill/> &nbsp; الانجازات : حاصل
 
-                على جائزة أفضل طبيب
+                {doctor.achievements}
               </h6>
             </div>
           </div>
@@ -118,11 +172,9 @@ export default function Dr_Profile() {
                       width="40"
                       height="40"
                     />
-                    <h4>شخصية 1</h4> <span>- 20 October, 2018</span> <br />
+                    <h4> {user}</h4> <span>- 20 October, 2018</span> <br />
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Accusamus numquam assumenda hic aliquam vero sequi velit
-                      molestias doloremque molestiae dicta?
+                     
                     </p>
                   </div>
                   <div className="text-justify darker mt-4 float-right">
@@ -202,3 +254,8 @@ export default function Dr_Profile() {
     </>
   );
 }
+const mapStateToProps = state => ({
+  isregistered: state.addapp.isregistered
+});
+
+export default connect(mapStateToProps,{add_appointment})(Dr_Profile);
