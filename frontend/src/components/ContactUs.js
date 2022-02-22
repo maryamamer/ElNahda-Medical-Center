@@ -45,7 +45,7 @@ function ContactUs() {
                   />
                 </span>
                 </p>
-<<<
+
               </div>
             </div>
             <div className="col-lg-12 p-0 pb-4 speciality-item d-flex flex-row flex-wrap align-items-center justify-content-between text-right">
@@ -60,7 +60,7 @@ function ContactUs() {
                   />
                 </span></p>
               </div>
-===
+
             </div>
           </div>
         </div>
