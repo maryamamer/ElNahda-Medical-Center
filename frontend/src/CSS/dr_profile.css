@@ -14,6 +14,8 @@
   padding: 30px;
 }
 .doc-det {
+  text-align: right;
+
 
   position: relative;
   text-align: center;
@@ -31,8 +33,6 @@
 .doc-det > img {
   z-index: 1;
 
-position: relative;
-
 
 
   width: 280px;
@@ -45,7 +45,6 @@ position: relative;
 
 }
 .stars .star {
-  position: relative;
 
   fill: yellow;
   margin: 3px;
@@ -53,11 +52,7 @@ position: relative;
  
 }
 .info {
-  position: relative;
   display: flex;
-  float: right;
-  text-align: right;
-
   margin:10px;
 }
 .info > h6 {

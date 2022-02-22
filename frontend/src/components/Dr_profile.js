@@ -1,23 +1,81 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import {React,useState,useEffect, Fragment} from "react";
+import { Link,useParams,Redirect } from "react-router-dom";
 import Doctor from "../media/images/Doctor.jpeg";
 import "../CSS/dr_profile.css";
 import { BsFillTelephoneOutboundFill} from "react-icons/bs";
 import { BsFillEnvelopeFill} from "react-icons/bs";
 import { BsFillAwardFill} from "react-icons/bs";
 import { BsBook } from "react-icons/bs";
+import axios from "axios";   
+import { add_appointment } from '../actions/appointment';
+import { connect } from 'react-redux';
+import jwtDecode from "jwt-decode";
 
+ function Dr_Profile({ add_appointment, isregistered }) {
+  const params = useParams();
+  const [doctor, setdoctor] = useState({});
+  console.log(params);
+  const[registered,setregistered]=useState(false)
+  const[recommend,setrecommend]=useState([])
+const token = localStorage.getItem('access')
+const user=jwtDecode(token).user_id
+ 
+  console.log(isregistered)
+  useEffect(() => {
+    
+    axios
+      .get(`/doctors/${params.id}`)
+      .then((res) => setdoctor(res.data))
+  },[])
 
+   function getrecommend(){
+   const res= axios
+    .get(`/doctors`)
+  res.filter((r)=>r.specialization==doctor.specialization)
+  setrecommend(res)
+  }
+  const [redirect, setRedirect] = useState(false);
+  const notregLinks = () => (
+      
+    <Fragment>
+      
+      <Link to={`/booking/${doctor.id}`}>
 
-export default function Dr_Profile() {
+<input
+  type="button"
+  className="btn btn-primary"
+  id="book-btn"
+  value="احجز الأن"
+/>
+</Link>
+        {/* <li className='nav-item'>
+            <Link className='nav-link' to='/signup'>Sign Up</Link>
+        </li> */}
+      
+    </Fragment>
+);
+
+   
+
+const regLinks = () => (
+ 
+
+  <input
+    type="button"
+    className="btn btn-danger"
+    id="book-btn"
+    value=" الغاء الحجز"
+  />
+
+);
+  
   return (
     <>
    
       <div className="row text-right ">
-
         <div className="col-md-3 ">
           <div className="doc-det">
-            <img src={Doctor} alt="" />
+            <img src={doctor.image} alt="" />
             <svg
               xmlns={"http://www.w3.org/2000/svg"}
               width="30"
@@ -29,7 +87,7 @@ export default function Dr_Profile() {
               <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
               <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
             </svg>
-            <h5>دكتور دانيال فوزي </h5>
+            <h5>{doctor.fullname}</h5>
             <div className="stars">
               <svg
                 repeat-element="5"
@@ -47,7 +105,7 @@ export default function Dr_Profile() {
             <div className="info">
               <h6>
                 <br />
-                تخصص : أخصائي أمراض القلب والباطنة
+                تخصص : {doctor.specialization}
                 <br /> ثمن الكشف : 100 جنيه مصري
                 <br /> الخبرة : 20 عام
               </h6>
@@ -55,16 +113,20 @@ export default function Dr_Profile() {
           </div>
           <div className="book m-5 p-3 text-center">
             <i className="fas fa-calendar fa-2x"></i>
+    
+    <Fragment>
+    {/* <Link to={`/booking/${doctor.id}`}>
 
-            <Link to="/booking">
-
-              <input
-                type="button"
-                className="btn btn-primary"
-                id="book-btn"
-                value="احجز الأن"
-              />
-            </Link>
+<input
+  type="button"
+  className="btn btn-primary"
+  id="book-btn"
+  value="احجز الأن"
+/>
+</Link> */}
+ {isregistered ? regLinks() : notregLinks()}
+    </Fragment>
+           
           </div>
         </div>
         <div className="col">
@@ -73,14 +135,14 @@ export default function Dr_Profile() {
               <h6>
 
                 <br /> &nbsp; الهاتف <BsFillTelephoneOutboundFill />
-                : 02-10293792382
+                {doctor.phone}
                 <br />  &nbsp; <BsFillEnvelopeFill/>الميل :
-                d@gmail.com
+               {doctor.email}
                 <br /> <BsBook /> &nbsp; التعليم :
-                دكتوراة من جامعة القاهرة
+                {doctor.education_degree}
                 <br /> <BsFillAwardFill/> &nbsp; الانجازات : حاصل
 
-                على جائزة أفضل طبيب
+                {doctor.achievements}
               </h6>
             </div>
           </div>
@@ -111,11 +173,9 @@ export default function Dr_Profile() {
                       width="40"
                       height="40"
                     />
-                    <h4>شخصية 1</h4> <span>- 20 October, 2018</span> <br />
+                    <h4> {user}</h4> <span>- 20 October, 2018</span> <br />
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Accusamus numquam assumenda hic aliquam vero sequi velit
-                      molestias doloremque molestiae dicta?
+                     
                     </p>
                   </div>
                   <div className="text-justify darker mt-4 float-right">
@@ -195,3 +255,8 @@ export default function Dr_Profile() {
     </>
   );
 }
+const mapStateToProps = state => ({
+  isregistered: state.addapp.isregistered
+});
+
+export default connect(mapStateToProps,{add_appointment})(Dr_Profile);

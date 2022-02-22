@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
 import { Provider } from 'react-redux';
 import store from './store';
+
 
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -22,6 +24,11 @@ import logout from "./components/logout";
 import prescription from "./components/prescription"
 import appointments from './components/appointments'
 import Dr_Profile from "./components/Dr_profile";
+
+import Booking from "./components/booking";
+
+
+
 import Message from "./components/Message";
 import Chatbot from './components/chatbot/Chatbot'
 
@@ -29,16 +36,10 @@ import Chatbot from './components/chatbot/Chatbot'
 
 
 // import Dr_Profile from "./components/Dr_profile";
-import Booking from "./components/booking";
 
 
-
-
-
-
-
-export default class App extends Component {
-  render() {
+export default function App (props) {
+ 
     return (
       <div className="App">
         <Router>
@@ -46,14 +47,10 @@ export default class App extends Component {
             <NavBar />
 
           <Switch>
-
               <Route path={"/"} exact component={HomePage} />
-              <Route path={"/dr"} exact component={Dr_Profile} />
-              <Route path={"/booking"} exact component={Booking} />
-
-
-              <Route  path={"/Home"} exact component={HomePage} />
-
+              <Route path={"/dr/:id"} exact component={Dr_Profile} />
+              <Route path={"/booking/:id"} exact component={Booking} />
+              <Route path={"/Home"} exact component={HomePage} />
               <Route path={"/ContactUs"} exact component={ContactUs} />
               <Route path={"/Chatbot"} exact component={Chatbot} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
@@ -63,10 +60,8 @@ export default class App extends Component {
               <Route path={"/patientPortal"} exact component={patient_portal} />
               <Route path={"/prescription"} exact component={prescription} />
               <Route path={"/appointments"} exact component={appointments} />
-
               <Route path={"/Message"} exact component={Message} />
-              <PrivateRoute path={"/ProfilePage"} exact component={ProfilePage} />
-
+              <Route path={"/ProfilePage"} exact component={ProfilePage} />
               <Route path={"/Login"} exact component={Login} />
               <Route path={"/Message"} exact component={Message} />
               <Route path={"/Forget"} exact component={Forget} />
@@ -76,5 +71,5 @@ export default class App extends Component {
         </Router>
       </div>
     );
-  }
+  
 }

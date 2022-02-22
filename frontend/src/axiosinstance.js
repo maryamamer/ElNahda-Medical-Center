@@ -4,26 +4,26 @@ import dayjs from "dayjs";
 
 const baseURL = "http://localhost:8000";
 
-let tokens = localStorage.getItem("authtokens")
-  ? JSON.parse(localStorage.getItem("authtokens"))
+let tokens = localStorage.getItem("access")
+  ? JSON.parse(localStorage.getItem("access"))
   : null;
 
 const axiosinstance = axios.create({
   baseURL,
   headers: {
-    Authorization: `Bearer ${tokens.access}`,
+    Authorization: `Bearer ${tokens}`,
   },
 });
 
 axiosinstance.interceptors.request.use(async (req) => {
     if (!tokens){
-        tokens = localStorage.getItem("authtokens")
-    ? JSON.parse(localStorage.getItem("authtokens"))
+        tokens = localStorage.getItem("access")
+    ? JSON.parse(localStorage.getItem("access"))
     : null;
-    req.headers.Authorization = `Bearer ${tokens.access}`
+    req.headers.Authorization = `Bearer ${access}`
 
     }
-    const user=jwt_decode(tokens.access)
+    const user=jwt_decode(access)
     const isExpired = dayjs.unix(user.exp).diff(dayjs()) <1;
     if(!isExpired) return req
 

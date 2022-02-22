@@ -1,67 +1,122 @@
-import axios from 'axios';
+
+import axios from "axios";
+import login from "./auth";
+import {useParams,Link}  from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { FaAccessibleIcon } from 'react-icons/fa';
+import { FaAccessibleIcon } from "react-icons/fa";
 import {
-    ADD_APPOINTMENT,
-    REM_APPOINTMENT,
-    ADD_Patient_APPOINTMENT
+  ADD_APPOINTMENT,
+  REM_APPOINTMENT,
+  ADD_Patient_APPOINTMENT,
+  ADDED_APP
+} from "./types";
+import jwtDecode from "jwt-decode";
 
-} from './types';
+export const add_appointment = (date, message) => async (dispatch) => {
+    // const { params }= matchPath(window.location.pathname, {
+    //     path: "http://localhost:3000/booking/1"
+    //  })
+    //  console.log(params.id)
 
-export const add_appointment = (date, message) => async dispatch => {
+  const token = localStorage.getItem("access");
+  const user = jwtDecode(token).user_id;
+  console.log(user)
+ 
 
-        const config = {
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `JWT ${localStorage.getItem('access')}`,
-                'Accept': 'application/json'
-            }
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+       Authorization: `JWT ${localStorage.getItem("access")}`,
+       Accept: "application/json",
+    },
+  };
+  const body = JSON.stringify({
+        date: date,
+        message: message,
+        patient_id: user,
+        doctor_id: window.location.pathname.split('/')[2]
+      })
+  return  axios
+  .post(`/Appointments/`,body,config)
+  .then((res) => dispatch({
+      type:"ADD_APPOINTMENT",
+      payload:res.data,
+  })
 
-        }
+  )
+  .catch((err) => console.log(err))
+}
 
-        const body = JSON.stringify({ date:date, message:message });
+export const registered = () => async dispatch => {
 
-        try {
-            const res = await axios.post(`/Appointments/`,body,config);
-    
-            dispatch({
-                type: ADD_APPOINTMENT,
-                payload: res.data
-            });
-            console.log(res.data)
-        } catch (err) {
-           console.log(err)
-        }
- };
+    const config = {
+    headers: {
+      "Content-Type": "application/json",
+       Authorization: `JWT ${localStorage.getItem("access")}`,
+       Accept: "application/json",
+    },
+  };
+  return  axios
+  .get(`/Appointments/`)
+  .then ((res)=>{
+      if (res.status===200){
+          const app=res.data
+          console.log(res.data)
+        dispatch({
+                  type:"ADDED_APP",
+                  payload:res.data,
+              })
 
-export const add_patient_appointment = () => async dispatch => {
+      }
+  })
+//   .then((res) => dispatch({
+//       type:"ADD_APPOINTMENT",
+//       payload:res.data,
+//   })
+  .catch((err) => console.log(err))
+};
+//   const params = useParams();
+//   const body = JSON.stringify({
+//     date: date,
+//     message: message,
+//     patient_id:4,
+//     doctor_id: 3
+//   });
+//   try {
+//     const res = await axios.post(`/Appointments/`, body, config);
+//     dispatch({
+//       type: ADD_APPOINTMENT,
+//       payload: res.data,
+//     });
+//     console.log(res.data);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
 
-    const apps =useSelector((state)=>state.addapp)
-    console.log(apps)
-        const config = {
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `JWT ${localStorage.getItem('access')}`,
-                'Accept': 'application/json'
-            }
-        }
+// export const add_patient_appointment = () => async (dispatch) => {
+//   const config = {
+//     headers: {
+//       "Content-Type": "application/json",
+//       Authorization: `JWT ${localStorage.getItem("access")}`,
+//       Accept: "application/json",
+//     },
+//   };
 
-        const body = JSON.stringify({ app_id:apps.id, patient_id:localStorage.getItem('access').id });
-         
-        try {
-            
-            const res = await axios.post(`/PatientAppointments/`,body,config);
-    
-            dispatch({
-                type: ADD_Patient_APPOINTMENT,
-                payload: res.data
-            });
-            console.log(res.data)
-        } catch (err) {
-           console.log(err)
-        }
-    }
+//   const body = JSON.stringify({
+//     patient_id: jwtDecode(localStorage.getItem("access")).user_id,
+//   });
 
+//   try {
+//     const res = await axios.post(`/PatientAppointments/`, body, config);
 
-
+//     dispatch({
+//       type: ADD_Patient_APPOINTMENT,
+//       payload: res.data,
+//     });
+//     console.log(res.data);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }

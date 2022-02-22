@@ -7,7 +7,7 @@ admin.site.register(Doctor)
 
 class CustomUserAdmin(UserAdmin):
     model = Customuser
-    list_display = ['email', 'username', 'first_name', 'last_name', 'is_staff']
+    list_display = ['email', 'username', 'first_name', 'last_name', 'is_staff','age']
 
 admin.site.register(Customuser, CustomUserAdmin)
 

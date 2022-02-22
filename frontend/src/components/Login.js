@@ -1,5 +1,3 @@
-
-
 /* import { React, useContext } from "react";
 import Nurse from '../media/images/Nurse.jpeg';
 import '../CSS/Login.css';*/
@@ -8,9 +6,10 @@ import Auth from "../context/auth";
 import Nurse from '../media/images/Nurse.jpeg';
 import '../CSS/Login.css';
 import React, { useState, useContext } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect,useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { login } from '../actions/auth';
+
 import axios from 'axios';
 /*
 function Login() {
@@ -20,6 +19,7 @@ const Login = ({ login, isAuthenticated }) => {
         email: '',
         password: ''
     });
+    const history = useHistory();
 
     const { email, password } = formData;
 
@@ -36,6 +36,7 @@ const Login = ({ login, isAuthenticated }) => {
 
     if (isAuthenticated) {
         return <Redirect to='/' />
+        
     }
     return (
 
@@ -47,13 +48,13 @@ const Login = ({ login, isAuthenticated }) => {
                     <div class="row justify-content-md-center h-100 ">
                         <div class="card-wrapper">
                             <div class="brand">
-                                <h4 class="card-title text-dark">تسجيل الدخول</h4>
+                                <h1 class="card-title text-dark">تسجيل الدخول</h1>
                             </div>
                             <div class="card-body">
 
                                 <form method="post" class="my-login-validation" novalidate onSubmit={e => onSubmit(e)} /* onSubmit={loginuser} */>
-                                    <div class="form-group">
-                                        <label for="email">اسم المسنخدم</label>
+                                    <div class="form-group ">
+                                        <label for="email " className=" text-light">اسم المستخدم</label>
                                         <input id="email" type="email" class="form-control" name="email" required value={email}
                                             onChange={e => onChange(e)} />
                                         <div class="invalid-feedback">
