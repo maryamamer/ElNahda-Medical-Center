@@ -1,4 +1,5 @@
 import axios from 'axios';
+import login from "./auth"
 
 import { useSelector, useDispatch } from "react-redux";
 import { FaAccessibleIcon } from 'react-icons/fa';
@@ -8,8 +9,10 @@ import {
     ADD_Patient_APPOINTMENT
 
 } from './types';
+import jwtDecode from 'jwt-decode';
 
 export const add_appointment = (date, message) => async dispatch => {
+   
 
         const config = {
             headers: {
@@ -20,7 +23,7 @@ export const add_appointment = (date, message) => async dispatch => {
 
         }
 
-        const body = JSON.stringify({ date:date, message:message });
+        const body = JSON.stringify({ date:date, message:message,patient_id:jwtDecode(localStorage.getItem('access')).user_id  });
 
         try {
             const res = await axios.post(`/Appointments/`,body,config);
@@ -36,9 +39,6 @@ export const add_appointment = (date, message) => async dispatch => {
  };
 
 export const add_patient_appointment = () => async dispatch => {
-
-    const apps =useSelector((state)=>state.addapp)
-    console.log(apps)
         const config = {
             headers: {
                 'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export const add_patient_appointment = () => async dispatch => {
             }
         }
 
-        const body = JSON.stringify({ app_id:apps.id, patient_id:localStorage.getItem('access').id });
+        const body = JSON.stringify({ patient_id:jwtDecode(localStorage.getItem('access')).user_id });
          
         try {
             

@@ -167,6 +167,8 @@ class Appointment(models.Model):
     id=models.AutoField(primary_key=True)
     date = models.DateTimeField(auto_now_add=True)
     message=models.TextField(null=True)
+    patient_id = models.ForeignKey(Customuser, on_delete=models.CASCADE)
+    doctor_id = models.ForeignKey(Doctor, on_delete=models.CASCADE)
     
     
 class PatientAppointment(models.Model):

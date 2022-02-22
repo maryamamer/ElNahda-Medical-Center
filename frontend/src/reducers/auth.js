@@ -1,4 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
+
 import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
@@ -21,6 +22,7 @@ export default function (state = initialState, action) {
 
     switch (type) {
         case AUTHENTICATED_SUCCESS:
+
             return {
                 ...state,
                 isAuthenticated: true
@@ -40,6 +42,7 @@ export default function (state = initialState, action) {
                 ...state,
                 user: payload
             }
+         
         case AUTHENTICATED_FAIL:
             return {
                 ...state,

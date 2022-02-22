@@ -6,18 +6,26 @@ import Nada from '../media/images/Nada.png'
 import '../CSS/Doctors.css'
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
+import { connect } from 'react-redux';
+import { get_doctor } from '../actions/doctor';
 
 
 function Doctors() {
-    const [doctors, setdoctor] = useState([]);
+    const doctors =useSelector((state)=>state.doctor)
+    console.log(doctors)
+    // const [doctors, setdoctor] = useState([]);
+    // setdoctor(doctor)
+    // setdoctor(useSelector(state=>state.doctor.doctor))
+    // console.log(doctors)
+    // console.log(doctor)
 
-    useEffect(() => {
-        axios.get('/doctors')
-            .then(res => setdoctor(res.data))
-            .catch((err) => console.log(err));
+    // useEffect(() => {
+    //     axios.get('/doctors')
+    //         .then(res => setdoctor(res.data))
+    //         .catch((err) => console.log(err));
 
 
-    });
+    // });
 
     return (
         <>
@@ -31,16 +39,16 @@ function Doctors() {
                 <div className="container-fluid">
                     <div className="row m-5">
                         {
-                            doctors.map((doctor, i) => {
+                            doctors.map((d, i) => {
                                 return (
                                     <>
                                         <div className="col-md-3">
                                             <Link to= "/dr">
                                             <div className="divDoctor">
-                                                <img className="img1" src={`${doctor.image}`} />
+                                                <img className="img1" src={`${d.image}`} alt="doctor" />
                                                 <div className="overview justify-content-evenly">
-                                                    <h2>{doctor.fullname}</h2>
-                                                    <p> {doctor.specialization}</p>
+                                                    <h2>{d.fullname}</h2>
+                                                    <p> {d.specialization}</p>
                                                     <p>التقييم</p>
                                                 </div>
                                             </div>
@@ -59,4 +67,9 @@ function Doctors() {
     );
 }
 
-export default Doctors;
+const mapStateToProps = state => ({
+    doctor: state.doctor,
+  
+});
+
+export default connect(mapStateToProps)(Doctors);

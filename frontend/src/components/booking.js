@@ -1,4 +1,4 @@
-r
+
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import "../CSS/booking.css";
@@ -55,13 +55,8 @@ function Booking({ add_appointment, isAuthenticated }) {
                 onChange={e => onChange(e)} id="message" placeholder="إترك رسالتك" maxlength="140" rows="7"></input>
 
 
-
-            <div className="form-group">
-
-              <input className="form-control text-right" type="text" name="message" value={message}
-                onChange={e => onChange(e)} id="message" placeholder="إترك رسالتك" maxlength="140" rows="7"></input>
-
-            </div>
+</div>
+            
 
             {/* <!-- Button Area--> */}
             <div className="checkbox">
