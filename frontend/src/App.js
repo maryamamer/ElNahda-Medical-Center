@@ -20,6 +20,8 @@ import prescription from "./components/prescription"
 import appointments from './components/appointments'
 import Dr_Profile from "./components/Dr_profile";
 import Message from "./components/Message";
+import Chatbot from './components/chatbot/Chatbot'
+
 
 export default class App extends Component {
   render() {
@@ -34,8 +36,10 @@ export default class App extends Component {
           <Switch>
             <AuthProvider>
               <Route path={"/"} exact component={Dr_Profile} />
+              
               <Route  path={"/Home"} exact component={HomePage} />
               <Route path={"/ContactUs"} exact component={ContactUs} />
+              <Route path={"/ContactUs"} exact component={Chatbot} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
               <Route path={"/Logout"} exact component={logout} />
               <Route path={"/Editpp"} exact component={Editpp} />

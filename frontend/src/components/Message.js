@@ -1,7 +1,7 @@
 import React from "react";
 import avatar from '../media/images/avatar.png';
 import '../CSS/message.css';
-function Login() {
+function Message() {
     return (
 <>
 
@@ -63,3 +63,4 @@ function Login() {
 
 
 }
+export default Message;
