@@ -59,12 +59,6 @@ const params=useParams()
 
 </div>
 
-            <div className="form-group">
-
-              <input className="form-control text-right" type="text" name="message" value={message}
-                onChange={e => onChange(e)} id="message" placeholder="إترك رسالتك" maxlength="140" rows="7"></input>
-
-</div>
             
 
             {/* <!-- Button Area--> */}
