@@ -6,11 +6,9 @@ import { BsFillTelephoneOutboundFill} from "react-icons/bs";
 import { BsFillEnvelopeFill} from "react-icons/bs";
 import { BsFillAwardFill} from "react-icons/bs";
 import { BsBook } from "react-icons/bs";
-import axios from "axios";
-
+import axios from "axios";   
 
 export default function Dr_Profile() {
-
   const params = useParams();
   const [doctor, setdoctor] = useState({});
   console.log(params);
@@ -20,12 +18,7 @@ export default function Dr_Profile() {
       .get(`/doctors/${params.id}`)
       .then((res) => setdoctor(res.data))
   },[])
-      
-
-
-
-
-export default function Dr_Profile() {
+  
   return (
     <>
       <div className="row text-right ">
