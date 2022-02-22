@@ -31,7 +31,7 @@ function ProfilePage() {
                   </div>
                 </div>
               </div>
-              <div className="card mt-3 ">
+              {/* <div className="card mt-3 ">
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                     <h6 className="mb-0">
@@ -112,28 +112,28 @@ function ProfilePage() {
                     <Link to="/patientPortal">سجل المريض</Link>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="row" >
 
 
-                <div className="col-sm-8">
-                    <div className="card " style={{"width": "82rem;"}}>
+                <div className="col-md-4">
+                    <div className="card " >
                         <div className="card-body">
                             <div className="row">
 
-                                <div className="col-sm-9 text-secondary">
+                                <div className="col-md-9 text-secondary">
                                
                                 </div>
-                                <div className="col-sm-3">
+                                <div className="col-md-3">
                                     <h6 className="mb-0">الاسم بالكامل</h6>
                                 </div>
                             </div>
                             <hr />
                             <div className="row">
 
-                                <div className="col-sm-9 text-secondary">
+                                <div className="col-md-9 text-secondary">
                                     nada.taha9411@gmail.com
                                 </div>
                                 <div className="col-sm-3">
@@ -143,17 +143,17 @@ function ProfilePage() {
                             <hr />
                             <div className="row">
 
-                                <div className="col-sm-9 text-secondary">
+                                <div className="col-md-9 text-secondary">
                                     08455464
                                 </div>
-                                <div className="col-sm-3">
+                                <div className="col-md-3">
                                     <h6 className="mb-0">الهاتف المنزلى</h6>
                                 </div>
                             </div>
                             <hr />
                             <div className="row">
 
-                                <div className="col-sm-9 text-secondary">
+                                <div className="col-md-9 text-secondary">
                                     01033377120
                                 </div>
                                 <div className="col-sm-3">
@@ -189,27 +189,27 @@ function ProfilePage() {
                                 className="material-icons text-info mr-2">التحاليل</i>
                             <br />
                             <small>فيتامين س</small>
-                            <div className="progress mb-3" style={{"height": "5px"}}>
+                            <div className="progress mb-3" >
                                 <div className="progress-bar bg-success" role="progressbar" style={{"width": "80%"}}
                                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <small>فيتامين د</small>
-                            <div className="progress mb-3" style={{"height": "5px"}}>
+                            <div className="progress mb-3" >
                                 <div className="progress-bar bg-primary" role="progressbar" style={{"width": "72%"}}
                                     aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <small>فيتامين أ</small>
-                            <div className="progress mb-3" style={{"height": "5px"}}>
+                            <div className="progress mb-3" >
                                 <div className="progress-bar bg-danger" role="progressbar" style={{"width": "45%"}}
                                     aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <small>فيتامين ب</small>
-                            <div className="progress mb-3" style={{"height": "5px"}}>
+                            <div className="progress mb-3" >
                                 <div className="progress-bar bg-warning" role="progressbar" style={{"width": "55%"}}
                                     aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <small>الحديد</small>
-                            <div className="progress mb-3" style={{"height": "5px"}}>
+                            <div className="progress mb-3" >
                                 <div className="progress-bar bg-warning" role="progressbar" style={{"width": "50%"}}
                                     aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>

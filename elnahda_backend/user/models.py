@@ -53,6 +53,8 @@ class Doctor(models.Model):
     phone = models.CharField(verbose_name="phone",null=True, validators=[phone_regex], max_length=14)
     date_of_birth = models.DateField(null=True)
     address= models.TextField(null=True)
+    price = models.IntegerField(null=True)
+
     age = models.IntegerField(null=True)
     GENDER_CHOICES = (
         ('male', 'Male'),

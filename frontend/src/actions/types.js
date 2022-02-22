@@ -11,6 +11,7 @@ export const ADD_APPOINTMENT ='ADD_APPOINTMENT';
 export const ADD_Patient_APPOINTMENT ='ADD_Patient_APPOINTMENT ';
 export const ADD_Doctor_APPOINTMENT ='ADD_Doctor_APPOINTMENT ';
 export const REM_APPOINTMENT ='REM_APPOINTMENT';
-export const GET_DOCTOR ='GET_DOCTOR'
+export const GET_DOCTOR ='GET_DOCTOR';
+export const ADDED_APP='ADDED_APP'
 
 

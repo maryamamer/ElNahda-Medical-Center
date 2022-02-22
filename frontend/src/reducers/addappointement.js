@@ -3,7 +3,8 @@ import {
     ADD_APPOINTMENT,
     ADD_Patient_APPOINTMENT,
     ADD_Doctor_APPOINTMENT,
-    REM_APPOINTMENT
+    REM_APPOINTMENT,
+    ADDED_APP
 
    
 } from '../actions/types';
@@ -13,6 +14,7 @@ const INITIAL_STATE = {
   access: localStorage.getItem("access"),
   refresh: localStorage.getItem("refresh"),
   isAuthenticated: null,
+  isregistered:null,
   app: null,
 };
 export default function addapp(state = INITIAL_STATE, action) {
@@ -22,7 +24,14 @@ export default function addapp(state = INITIAL_STATE, action) {
       return {
         ...state,
         app: payload,
+       
       };
+    case ADDED_APP:
+      return {
+        ...state,
+        app:payload,
+        isregistered:true
+      }
     case ADD_Patient_APPOINTMENT:
       return {
         ...state,
