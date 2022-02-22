@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+
 import { Provider } from 'react-redux';
 import store from './store';
+
+
 import "./App.css";
 import NavBar from "./components/NavBar";
 import ContactUs from "./components/ContactUs";
@@ -21,15 +25,17 @@ import prescription from "./components/prescription"
 import appointments from './components/appointments'
 import Dr_Profile from "./components/Dr_profile";
 
+import Booking from "./components/booking";
+
+
+
+import Message from "./components/Message";
+import Chatbot from './components/chatbot/Chatbot'
+
+
 
 
 // import Dr_Profile from "./components/Dr_profile";
-import Booking from "./components/booking";
-
-import Message from "./components/Message";
-
-
-
 
 
 export default function App (props) {
@@ -46,6 +52,7 @@ export default function App (props) {
               <Route path={"/booking/:id"} exact component={Booking} />
               <Route path={"/Home"} exact component={HomePage} />
               <Route path={"/ContactUs"} exact component={ContactUs} />
+              <Route path={"/Chatbot"} exact component={Chatbot} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
               <Route path={"/Logout"} exact component={logout} />
               <Route path={"/Editpp"} exact component={Editpp} />
@@ -53,7 +60,10 @@ export default function App (props) {
               <Route path={"/patientPortal"} exact component={patient_portal} />
               <Route path={"/prescription"} exact component={prescription} />
               <Route path={"/appointments"} exact component={appointments} />
-              <Route path={"/ProfilePage"} exact component={ProfilePage} />
+
+              <Route path={"/Message"} exact component={Message} />
+              <PrivateRoute path={"/ProfilePage"} exact component={ProfilePage} />
+
               <Route path={"/Login"} exact component={Login} />
               <Route path={"/Message"} exact component={Message} />
               <Route path={"/Forget"} exact component={Forget} />

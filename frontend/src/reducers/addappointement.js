@@ -1,9 +1,13 @@
+
 import {
-  ADD_APPOINTMENT,
-  ADD_Patient_APPOINTMENT,
-  ADD_Doctor_APPOINTMENT,
-  REM_APPOINTMENT,
-} from "../actions/types";
+    ADD_APPOINTMENT,
+    ADD_Patient_APPOINTMENT,
+    ADD_Doctor_APPOINTMENT,
+    REM_APPOINTMENT
+
+   
+} from '../actions/types';
+
 
 const INITIAL_STATE = {
   access: localStorage.getItem("access"),

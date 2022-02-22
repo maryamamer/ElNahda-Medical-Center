@@ -13,7 +13,6 @@ export default function Dr_Profile() {
 
   const params = useParams();
   const [doctor, setdoctor] = useState({});
-
   console.log(params);
   useEffect(() => {
     
@@ -22,6 +21,11 @@ export default function Dr_Profile() {
       .then((res) => setdoctor(res.data))
   },[])
       
+
+
+
+
+export default function Dr_Profile() {
   return (
     <>
       <div className="row text-right ">

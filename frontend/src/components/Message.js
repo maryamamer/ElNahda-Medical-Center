@@ -1,7 +1,10 @@
 import React from "react";
 import avatar from '../media/images/avatar.png';
 import '../CSS/message.css';
-export default function Message() {
+
+
+function Message() {
+
     return (
 <>
 
@@ -63,3 +66,6 @@ export default function Message() {
 
 
 }
+
+export default Message;
+

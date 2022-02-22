@@ -44,6 +44,7 @@ function Doctors(props) {
                                     <>
                                         <div className="col-md-3">
                                             <Link to={ `/dr/${d.id}`}>
+
                                             <div className="divDoctor">
                                                 <img className="img1" src={`${d.image}`} alt="doctor" />
                                                 <div className="overview justify-content-evenly">

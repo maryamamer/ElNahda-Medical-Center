@@ -1,9 +1,11 @@
 
+
 import { React, useState } from "react";
 import { Link,useParams } from "react-router-dom";
 import "../CSS/booking.css";
 import { add_appointment } from "../actions/appointment";
 import { connect } from 'react-redux';
+
 
 
 function Booking({ add_appointment, isAuthenticated }) {
@@ -55,6 +57,12 @@ const params=useParams()
               <input className="form-control text-right" type="text" name="message" value={message}
                 onChange={e => onChange(e)} id="message" placeholder="إترك رسالتك" maxlength="140" rows="7"></input>
 
+</div>
+
+            <div className="form-group">
+
+              <input className="form-control text-right" type="text" name="message" value={message}
+                onChange={e => onChange(e)} id="message" placeholder="إترك رسالتك" maxlength="140" rows="7"></input>
 
 </div>
             
@@ -70,12 +78,13 @@ const params=useParams()
 
 
             <input type="reset" className="btn btn-primary" value="التراجع"/><hr />
-
+              
           </form>
 
           {/* <!-- form end --> */}
         </div>
       </div>
+      
 
 
 
@@ -87,4 +96,5 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { add_appointment })(Booking);
+
 

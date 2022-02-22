@@ -1,6 +1,6 @@
-/* import React from "react";
-import { Link } from 'react-router-dom';
-import { useContext } from "react"; */
+
+// import { Link } from 'react-router-dom';
+// import { useContext } from "react";
 import Auth from "../context/auth";
 import New from '../media/images/New.png';
 import '../CSS/NavBar.css';
@@ -79,6 +79,14 @@ const Navbar = ({ logout, isAuthenticated }) => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
+                    <Link className="navbar-brand" to="#">
+                            <img src={New}
+                                className="img-responsive logo"
+                                width="100"
+                                height="80"
+                                alt="New"
+                            />
+                        </Link>
                         <ul className="navbar-nav mr-auto">
                             {/* {
                             user ?
@@ -91,16 +99,12 @@ const Navbar = ({ logout, isAuthenticated }) => {
                                 </li>
 
                         } */}
+
                             {token && token_refresh ? authLinks() : guestLinks()}
                            
-                            
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/ContactUs">اتصل بنا
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/AboutUs">عنّا
-                                </Link>
+
+                        <li className="nav-item">
+                                <Link className="nav-link" to="/Home">الرئيسية </Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/Doctors">الأطباء
@@ -108,8 +112,19 @@ const Navbar = ({ logout, isAuthenticated }) => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/Home">الرئيسية </Link>
+                                <Link className="nav-link" to="/AboutUs">عنّا
+                                </Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/ContactUs">اتصل بنا
+                                </Link>
+                            </li>
+                            {isAuthenticated ? authLinks() : guestLinks()}
+                            
+                            
+                           
+                            
+                            
 
                         </ul>
                         <Link className="navbar-brand" to="/">
@@ -120,6 +135,7 @@ const Navbar = ({ logout, isAuthenticated }) => {
                                 alt="New"
                             />
                         </Link>
+
                     </div>
                 </nav>
                 {redirect ? <Redirect to='/' /> : <Fragment></Fragment>}
