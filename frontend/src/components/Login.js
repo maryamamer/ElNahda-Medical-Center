@@ -1,3 +1,6 @@
+import { React, useContext } from "react";
+import '../CSS/Login.css';
+
 /* import { React, useContext } from "react";
 import Nurse from '../media/images/Nurse.jpeg';
 import '../CSS/Login.css';*/
@@ -39,6 +42,7 @@ const Login = ({ login, isAuthenticated }) => {
 
         <>
 
+
             <section class="h-100" id="login">
                 <div class="container h-100 opacity-0.4;">
                     <div class="row justify-content-md-center h-100 ">
@@ -54,34 +58,37 @@ const Login = ({ login, isAuthenticated }) => {
                                         <input id="email" type="email" class="form-control" name="email" required value={email}
                                             onChange={e => onChange(e)} />
                                         <div class="invalid-feedback">
+
                                             من فضلك ادخل بريد ألكتروني صحيح
                                         </div>
                                     </div>
 
-                                    <div class="form-group" />
-                                    <label for="password">كلمة السر
+                                    <div className="form-group " />
+                                    <label for="password" className=" text-light">كلمة السر
 
                                     </label>
+
                                     <input id="password" type="password" class="form-control" name="password" required data-eye value={password}
                                         onChange={e => onChange(e)} />
                                     <div class="invalid-feedback">
+
                                         يجب ادخال كلمة السر
                                     </div>
 
 
-                                    <div class="form-group" />
-                                    <div class="custom-checkbox custom-control">
-                                        <input type="checkbox" name="remember" id="remember" class="custom-control-input" />
-                                        <label for="remember" class="custom-control-label">تذكرني
-                                            <a href="forgot.html" class="float-right">
+                                    <div className="form-group" />
+                                    <div className="custom-checkbox custom-control">
+                                        <input type="checkbox" name="remember" id="remember" className="custom-control-input" />
+                                        <label for="remember" className="custom-control-label text-light">تذكرني
+                                            <a href="forgot.html" className="float-right">
                                                 هل نسيت كلمة السر ؟
                                             </a>
                                         </label>
                                     </div>
 
 
-                                    <div class="form-group m-0" />
-                                    <input type="submit" class="btn btn-primary btn-block" value="تسجيل الدخول" />
+                                    <div className="form-group m-0" />
+                                    <input type="submit" className="btn btn-primary btn-block" value="تسجيل الدخول"  />
 
 
                                 </form>

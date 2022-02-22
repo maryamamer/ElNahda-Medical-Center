@@ -30,10 +30,12 @@ function ProfilePage() {
                             </div>
                         </div>
 
+
                         <div className="card mt-3 " style={{ "height": "25rem" }} >
                             <ul className="list-group list-group-flush" >
                                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                     <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24}
+
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round"
                                         className="feather feather-globe mr-2 icon-inline">
@@ -67,6 +69,7 @@ function ProfilePage() {
                                         </path>
                                     </svg>الفيس بوك </h6>
 
+
                                 </li>
                                 <br />
                                 <br> </br>
@@ -82,6 +85,7 @@ function ProfilePage() {
                                 </li>
                             </ul>
                         </div>
+
                     </div>
                 </div>
             </div>

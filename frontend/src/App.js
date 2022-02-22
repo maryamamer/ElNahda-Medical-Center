@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import { Provider } from 'react-redux';
 import store from './store';
+
 import "./App.css";
 import NavBar from "./components/NavBar";
 import ContactUs from "./components/ContactUs";
@@ -44,7 +46,9 @@ export default class App extends Component {
               <Route path={"/"} exact component={HomePage} />
               <Route path={"/dr"} exact component={Dr_Profile} />
               <Route path={"/booking"} exact component={Booking} />
-              <Route path={"/Home"} exact component={HomePage} />
+
+              <Route  path={"/Home"} exact component={HomePage} />
+
               <Route path={"/ContactUs"} exact component={ContactUs} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
               <Route path={"/Logout"} exact component={logout} />

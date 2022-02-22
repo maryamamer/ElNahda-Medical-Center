@@ -1,4 +1,4 @@
-r
+
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import "../CSS/booking.css";
@@ -91,4 +91,5 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { add_appointment })(Booking);
+
 
