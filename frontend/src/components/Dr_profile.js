@@ -106,7 +106,7 @@ const regLinks = () => (
               <h6>
                 <br />
                 تخصص : {doctor.specialization}
-                <br /> ثمن الكشف : 100 جنيه مصري
+                <br /> ثمن الكشف :  {doctor.price}
                 <br /> الخبرة : 20 عام
               </h6>
             </div>
