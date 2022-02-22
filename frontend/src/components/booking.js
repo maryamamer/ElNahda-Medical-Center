@@ -1,4 +1,5 @@
 
+
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import "../CSS/booking.css";
@@ -54,7 +55,7 @@ function Booking({ add_appointment, isAuthenticated }) {
               <input className="form-control text-right" type="text" name="message" value={message}
                 onChange={e => onChange(e)} id="message" placeholder="إترك رسالتك" maxlength="140" rows="7"></input>
 
-
+</div>
 
             <div className="form-group">
 
@@ -80,6 +81,7 @@ function Booking({ add_appointment, isAuthenticated }) {
           {/* <!-- form end --> */}
         </div>
       </div>
+      
 
 
 

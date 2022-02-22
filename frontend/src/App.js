@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
 import { Provider } from 'react-redux';
 import store from './store';
+
 
 import "./App.css";
 import NavBar from "./components/NavBar";
@@ -22,6 +24,11 @@ import logout from "./components/logout";
 import prescription from "./components/prescription"
 import appointments from './components/appointments'
 import Dr_Profile from "./components/Dr_profile";
+
+import Booking from "./components/booking";
+
+
+
 import Message from "./components/Message";
 import Chatbot from './components/chatbot/Chatbot'
 
@@ -29,12 +36,6 @@ import Chatbot from './components/chatbot/Chatbot'
 
 
 // import Dr_Profile from "./components/Dr_profile";
-import Booking from "./components/booking";
-
-
-
-
-
 
 
 export default class App extends Component {
@@ -50,7 +51,6 @@ export default class App extends Component {
               <Route path={"/"} exact component={HomePage} />
               <Route path={"/dr"} exact component={Dr_Profile} />
               <Route path={"/booking"} exact component={Booking} />
-
 
               <Route  path={"/Home"} exact component={HomePage} />
 

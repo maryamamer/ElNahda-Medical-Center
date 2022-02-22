@@ -31,6 +31,7 @@ function ProfilePage() {
                         </div>
 
 
+
                         <div className="card mt-3 " style={{ "height": "25rem" }} >
                             <ul className="list-group list-group-flush" >
                                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
@@ -70,6 +71,7 @@ function ProfilePage() {
                                     </svg>الفيس بوك </h6>
 
 
+
                                 </li>
                                 <br />
                                 <br> </br>
@@ -85,6 +87,7 @@ function ProfilePage() {
                                 </li>
                             </ul>
                         </div>
+
 
                     </div>
                 </div>
