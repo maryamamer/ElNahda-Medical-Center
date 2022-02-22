@@ -19,7 +19,8 @@ export default class HomePage extends React.Component {
   return (
     <>
       <body>
-
+     
+   
         <div id="hero" className="carousel slide" data-ride="carousel">
           {/* <!-- Indicators --> */}
           <ul className="carousel-indicators">

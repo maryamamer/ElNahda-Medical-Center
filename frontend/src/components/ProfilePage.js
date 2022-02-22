@@ -1,11 +1,11 @@
-import { React, useContext } from "react";
+import  React from "react";
 import pp from '../media/images/pp.png';
 import '../CSS/Profile.css';
-import Auth from "../context/auth";
+
 import { Link } from "react-router-dom";
 
 function ProfilePage() {
-    let { user } = useContext(Auth)
+   
     return (
 
         <>
@@ -51,7 +51,7 @@ function ProfilePage() {
 
 
                                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                    <h6 className="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24}
+                                    <h6 className="mb-0"><svg xmlns={"http://www.w3.org/2000/svg"} width={24} height={24}
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round"
                                         className="feather feather-instagram mr-2 icon-inline text-danger">
@@ -102,7 +102,7 @@ function ProfilePage() {
                             <div className="row">
 
                                 <div className="col-sm-9 text-secondary">
-                                    {/* {user.username} */}
+                               
                                 </div>
                                 <div className="col-sm-3">
                                     <h6 className="mb-0">الاسم بالكامل</h6>
