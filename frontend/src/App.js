@@ -55,7 +55,7 @@ export default class App extends Component {
               <Route  path={"/Home"} exact component={HomePage} />
 
               <Route path={"/ContactUs"} exact component={ContactUs} />
-              <Route path={"/ContactUs"} exact component={Chatbot} />
+              <Route path={"/Chatbot"} exact component={Chatbot} />
               <Route path={"/AboutUs"} exact component={AboutUs} />
               <Route path={"/Logout"} exact component={logout} />
               <Route path={"/Editpp"} exact component={Editpp} />

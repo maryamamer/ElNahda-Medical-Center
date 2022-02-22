@@ -12,6 +12,7 @@ import { BsBook } from "react-icons/bs";
 export default function Dr_Profile() {
   return (
     <>
+   
       <div className="row text-right ">
 
         <div className="col-md-3 ">
