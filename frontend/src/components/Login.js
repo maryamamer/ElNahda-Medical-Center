@@ -1,9 +1,4 @@
-import { React, useContext } from "react";
-<<<<<<< HEAD
-=======
 
->>>>>>> nada
-import '../CSS/Login.css';
 
 /* import { React, useContext } from "react";
 import Nurse from '../media/images/Nurse.jpeg';
